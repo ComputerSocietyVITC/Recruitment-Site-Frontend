@@ -10,7 +10,7 @@
 		<span>IEEE Computer Society</span>
 	</div>
 	<div class="flex md:gap-12 gap-4 items-center md:text-xl text-sm font-semibold">
-		<a href="{base}" class={navItem}><div>Home</div></a>
+		<a href="{base}/" class={navItem}><div>Home</div></a>
 		<a href="{base}/#about" class={navItem}><div>About</div></a>
 		<a href="{base}/#departments" class={navItem}><div>Departments</div></a>
 		<a href="{base}/#board" class={navItem}><div>Board</div></a>
