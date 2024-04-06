@@ -28,7 +28,9 @@
 
 	<div class="flex justify-around gap-[8rem]">
 		{#each contents as element}
-			<div class="flex flex-col gap-4 w-[18rem] h-[20rem] border-2 border-green rounded-3xl p-4">
+			<div
+				class="flex flex-col gap-4 w-[18rem] h-[20rem] border-2 border-green rounded-3xl p-4 bg-darker_gray"
+			>
 				<span class="text-center font-semibold text-xl">{element[0]}</span>
 				<span>{element[1]}</span>
 			</div>
