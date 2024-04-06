@@ -10,6 +10,6 @@
 		<a href="{base}/" class="text-2xl"><i class="fa-brands fa-discord"></i></a>
 		<a href="{base}/" class="text-2xl"><i class="fa-brands fa-x-twitter"></i></a>
 	</div>
-	<span class="text-sm">&copy; IEEE Computer Society, 2024-25. All rights reserved.</span>
+	<span class="text-sm text-center">&copy; IEEE Computer Society, 2024-25. All rights reserved.</span>
 	<span class="text-xs">Made with blood, sweat and tears by <a href="https://adityajyoti.com"><strong>Aditya Jyoti</strong></a></span>
 </footer>
