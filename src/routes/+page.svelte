@@ -1,5 +1,6 @@
 <script lang="ts">
 	import AboutUs from '$lib/components/AboutUs.svelte';
+	import BoardMembers from '$lib/components/BoardMembers.svelte';
 	import Departments from '$lib/components/Departments.svelte';
 </script>
 
@@ -21,6 +22,9 @@
 
 	<!-- Departments  -->
 	<Departments />
+
+	<!-- Board Members -->
+	<BoardMembers />
 </main>
 
 <style>

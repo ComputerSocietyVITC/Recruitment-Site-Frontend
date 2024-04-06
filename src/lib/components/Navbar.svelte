@@ -11,6 +11,7 @@
 		<a href="/" class={navItem}><div>Home</div></a>
 		<a href="#about" class={navItem}><div>About us</div></a>
 		<a href="#departments" class={navItem}><div>Departments</div></a>
+		<a href="#board" class={navItem}><div>Board</div></a>
 		<a href="#contacts" class={navItem}><div>Contacts</div></a>
 	</div>
 </nav>
