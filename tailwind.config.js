@@ -7,7 +7,8 @@ export default {
 				background: '#1B1B1B',
 				green: '#31CF9F',
 				gray: '#343434',
-				teal: '#358B9B'
+				teal: '#358B9B',
+				gold: '#C5DA45'
 			},
 			fontFamily: {
 				main: ['IBM Plex Sans', 'sans-serif']
