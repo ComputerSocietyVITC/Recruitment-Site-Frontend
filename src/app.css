@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	scroll-behavior: smooth;
+}
+
 .hover-1 {
 	--c: #358b9b; /* the color */
 	--s: 0.15em;

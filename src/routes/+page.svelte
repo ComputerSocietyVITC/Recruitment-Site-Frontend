@@ -1,4 +1,6 @@
-<script lang="ts"></script>
+<script lang="ts">
+	import AboutUs from '$lib/components/AboutUs.svelte';
+</script>
 
 <main class="flex flex-col items-center py-10">
 	<!-- HEADING / SPLASH TEXT -->
@@ -12,6 +14,9 @@
 		class="border-2 border-green border-opacity-60 rounded-[4rem] py-4 px-8 mt-10 text-xl font-bold get-started-button-shadow get-started-button-border btn-1"
 		>GET STARTED</button
 	>
+
+	<!-- About Us -->
+	<AboutUs />
 </main>
 
 <style>

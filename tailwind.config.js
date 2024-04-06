@@ -7,6 +7,7 @@ export default {
 				background: '#1B1B1B',
 				green: '#31CF9F',
 				gray: '#343434',
+				darker_gray: '#202020',
 				teal: '#358B9B',
 				gold: '#C5DA45'
 			},
