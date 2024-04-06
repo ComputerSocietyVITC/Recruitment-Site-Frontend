@@ -26,7 +26,7 @@
 		ABOUT US
 	</div>
 
-	<div class="flex md:flex-row flex-col justify-around md:gap-[8rem] gap-[2rem]">
+	<div class="flex md:flex-row flex-col md:gap-8 gap-4">
 		{#each contents as element}
 			<div
 				class="flex flex-col gap-4 w-[18rem] h-[20rem] border-2 border-green rounded-3xl p-4 bg-darker_gray"

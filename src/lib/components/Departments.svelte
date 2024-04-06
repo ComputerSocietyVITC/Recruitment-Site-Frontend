@@ -21,7 +21,7 @@
 	</div>
 
 	<div class="flex flex-col items-center justify-center">
-		<div class="flex md:flex-row flex-col md:gap-[20rem] gap-[2rem]">
+		<div class="flex md:flex-row flex-col md:gap-64 gap-4">
 			{#each topRow as element}
 				<div
 					class="flex flex-col items-center gap-4 bg-white text-black h-[10rem] w-[15rem] rounded-[2rem]"
@@ -38,7 +38,7 @@
 			{/each}
 		</div>
 		<div
-			class="flex md:flex-row flex-col md:gap-[20rem] gap-[2rem] md:-translate-y-10 md:mt-0 mt-[2rem]"
+			class="flex md:flex-row flex-col md:gap-64 gap-4 md:-translate-y-10 md:mt-0 mt-[2rem]"
 		>
 			{#each bottomRow as element}
 				<div

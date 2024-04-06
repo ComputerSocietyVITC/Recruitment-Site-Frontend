@@ -56,7 +56,7 @@
 	];
 </script>
 
-<section class="w-full flex flex-col items-center mt-10" id="board">
+<section class="w-full flex flex-col items-center mt-5" id="board">
 	<div
 		class="text-2xl font-semibold tracking-wide bg-gray w-[18rem] h-[3rem] flex items-center justify-center md:mb-20 mb-10"
 	>
@@ -64,7 +64,7 @@
 	</div>
 
 	<div class="flex flex-col items-center justify-center">
-		<div class="flex md:flex-row flex-col md:gap-[4rem] gap-[2rem] md:mb-10">
+		<div class="flex md:flex-row flex-col md:gap-20 gap-4 md:mb-10">
 			{#each clubLeads as user, idx}
 				{#if idx === 1}
 					<div
@@ -87,8 +87,20 @@
 				{/if}
 			{/each}
 		</div>
-		<div class="flex md:flex-row flex-col md:gap-[4rem] gap-[2rem] mt-8">
-			{#each departmentLeads as user}
+		<div class="flex md:flex-row flex-col md:gap-20 gap-4 mt-8">
+			{#each departmentLeads.splice(0, 3) as user}
+				<div
+					class="flex flex-col bg-darker_gray w-[16rem] h-[20rem] items-center p-4 rounded-2xl gap-2 border-2 border-green border-opacity-50"
+				>
+					<img src="{base}/{user.image}" alt={user.name} class="rounded-full h-36 w-36" />
+					<span class="font-semibold text-xl">{user.name}</span>
+					<span class="font-semibold text-sm text-gold">{user.department}</span>
+					<span class="italic text-sm text-center mt-4">{user.quote}</span>
+				</div>
+			{/each}
+		</div>
+		<div class="flex md:flex-row flex-col md:gap-20 gap-4 mt-8">
+			{#each departmentLeads.splice(0, 2) as user}
 				<div
 					class="flex flex-col bg-darker_gray w-[16rem] h-[20rem] items-center p-4 rounded-2xl gap-2 border-2 border-green border-opacity-50"
 				>
