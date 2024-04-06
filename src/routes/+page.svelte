@@ -6,9 +6,9 @@
 
 <main class="flex flex-col items-center py-10">
 	<!-- HEADING / SPLASH TEXT -->
-	<div class="flex flex-col gap-4 items-center">
-		<div class="text-5xl font-bold tracking-widest">IEEE COMPUTER SOCIETY</div>
-		<div class="text-3xl font-semibold tracking-wide">CLUB RECRUITMENT SYSTEM</div>
+	<div class="flex flex-col gap-4 items-center md:mt-0 -mt-8">
+		<div class="md:text-5xl text-4xl font-bold tracking-widest md:text-left text-center">IEEE COMPUTER SOCIETY</div>
+		<div class="md:text-3xl text-xl font-semibold tracking-wide">CLUB RECRUITMENT SYSTEM</div>
 	</div>
 
 	<!-- GET STARTED BUTTON -->
