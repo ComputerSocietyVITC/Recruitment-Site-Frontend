@@ -1,20 +1,22 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	const clubLeads = [
 		{
 			name: 'placeholder',
-			image: '/default-user.jpg',
+			image: 'default-user.jpg',
 			department: 'President ka left haath',
 			quote: 'You have never seen me and batman together have you'
 		},
 		{
 			name: 'placeholder',
-			image: '/default-user.jpg',
+			image: 'default-user.jpg',
 			department: 'President',
 			quote: 'You have never seen me and batman together have you'
 		},
 		{
 			name: 'placeholder',
-			image: '/default-user.jpg',
+			image: 'default-user.jpg',
 			department: 'President ka right haath',
 			quote: 'You have never seen me and batman together have you'
 		}
@@ -23,31 +25,31 @@
 	const departmentLeads = [
 		{
 			name: 'placeholder',
-			image: '/default-user.jpg',
+			image: 'default-user.jpg',
 			department: 'Technical Lead',
 			quote: 'You have never seen me and batman together have you'
 		},
 		{
 			name: 'placeholder',
-			image: '/default-user.jpg',
+			image: 'default-user.jpg',
 			department: 'UI/UX Lead',
 			quote: 'You have never seen me and batman together have you'
 		},
 		{
 			name: 'placeholder',
-			image: '/default-user.jpg',
+			image: 'default-user.jpg',
 			department: 'Design Lead',
 			quote: 'You have never seen me and batman together have you'
 		},
 		{
 			name: 'placeholder',
-			image: '/default-user.jpg',
+			image: 'default-user.jpg',
 			department: 'HR/Management Lead',
 			quote: 'You have never seen me and batman together have you'
 		},
 		{
 			name: 'placeholder',
-			image: '/default-user.jpg',
+			image: 'default-user.jpg',
 			department: 'Social Media Lead',
 			quote: 'You have never seen me and batman together have you'
 		}
@@ -68,7 +70,7 @@
 					<div
 						class="flex flex-col bg-darker_gray w-[16rem] h-[20rem] md:-translate-y-[2rem] items-center p-4 rounded-2xl gap-2 border-2 border-green border-opacity-50"
 					>
-						<img src={user.image} alt={user.name} class="rounded-full h-36 w-36" />
+						<img src="{base}/{user.image}" alt={user.name} class="rounded-full h-36 w-36" />
 						<span class="font-semibold text-xl">{user.name}</span>
 						<span class="font-semibold text-sm text-gold">{user.department}</span>
 						<span class="italic text-sm text-center mt-4">{user.quote}</span>
@@ -77,7 +79,7 @@
 					<div
 						class="flex flex-col bg-darker_gray w-[16rem] h-[20rem] md:translate-y-[2rem] items-center p-4 rounded-2xl gap-2 border-2 border-green border-opacity-50"
 					>
-						<img src={user.image} alt={user.name} class="rounded-full h-36 w-36" />
+						<img src="{base}/{user.image}" alt={user.name} class="rounded-full h-36 w-36" />
 						<span class="font-semibold text-xl">{user.name}</span>
 						<span class="font-semibold text-sm text-gold">{user.department}</span>
 						<span class="italic text-sm text-center mt-4">{user.quote}</span>
@@ -90,7 +92,7 @@
 				<div
 					class="flex flex-col bg-darker_gray w-[16rem] h-[20rem] items-center p-4 rounded-2xl gap-2 border-2 border-green border-opacity-50"
 				>
-					<img src={user.image} alt={user.name} class="rounded-full h-36 w-36" />
+					<img src="{base}/{user.image}" alt={user.name} class="rounded-full h-36 w-36" />
 					<span class="font-semibold text-xl">{user.name}</span>
 					<span class="font-semibold text-sm text-gold">{user.department}</span>
 					<span class="italic text-sm text-center mt-4">{user.quote}</span>
