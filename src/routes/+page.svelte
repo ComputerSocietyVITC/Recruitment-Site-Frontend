@@ -1,5 +1,6 @@
 <script lang="ts">
 	import AboutUs from '$lib/components/AboutUs.svelte';
+	import Departments from '$lib/components/Departments.svelte';
 </script>
 
 <main class="flex flex-col items-center py-10">
@@ -17,6 +18,9 @@
 
 	<!-- About Us -->
 	<AboutUs />
+
+	<!-- Departments  -->
+	<Departments />
 </main>
 
 <style>
