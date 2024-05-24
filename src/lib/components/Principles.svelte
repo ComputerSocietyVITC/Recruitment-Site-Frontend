@@ -2,7 +2,7 @@
 	import settings from '$lib/settings';
 </script>
 
-<section class="w-full flex flex-col items-center mt-16" id="princples">
+<section class="w-full flex flex-col items-center mt-16" id="principles">
 	<div
 		class="text-2xl font-semibold tracking-wide bg-gray w-[18rem] h-[3rem] flex items-center justify-center mb-10"
 	>

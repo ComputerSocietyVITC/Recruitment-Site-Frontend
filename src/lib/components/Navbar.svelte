@@ -10,7 +10,7 @@
 	</div>
 	<div class="flex md:gap-12 gap-4 items-center md:text-xl text-sm font-semibold">
 		<a href="{base}/"><div>Home</div></a>
-		<a href="{base}/#Principles"><div>Principles</div></a>
+		<a href="{base}/#principles"><div>Principles</div></a>
 		<a href="{base}/#departments"><div>Departments</div></a>
 	</div>
 </nav>
