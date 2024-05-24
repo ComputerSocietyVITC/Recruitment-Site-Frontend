@@ -1,0 +1,74 @@
+{
+	"club": {
+		"name": "Club Name",
+		"logo": "logo.png",
+		"about": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+		"principles": [
+			{
+				"name": "principle one",
+				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris"
+			},
+			{
+				"name": "principle two",
+				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris"
+			},
+			{
+				"name": "principle three",
+				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris"
+			}
+		],
+		"departments": [
+			{
+				"name": "Design",
+				"head": "Lead",
+				"linkedlin": "https://www.linkedin.com/",
+				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+				"icon": "design.svg"
+			},
+			{
+				"name": "Technical",
+				"head": "Lead",
+				"linkedlin": "https://www.linkedin.com/",
+				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+				"icon": "technical.svg"
+			},
+			{
+				"name": "HR and Management",
+				"head": "Lead",
+				"linkedlin": "https://www.linkedin.com/",
+				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+				"icon": "management.svg"
+			},
+			{
+				"name": "UI/UX",
+				"head": "Lead",
+				"linkedlin": "https://www.linkedin.com/",
+				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+				"icon": "ui-ux.svg"
+			},
+			{
+				"name": "Social Media",
+				"head": "Lead",
+				"linkedlin": "https://www.linkedin.com/",
+				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+				"icon": "social-media.svg"
+			}
+		],
+		"mediaPresence": {
+			"instagram": "https://www.instagram.com/",
+			"linkedin": "https://www.linkedin.com/",
+			"discord": "https://discord.com/invite/"
+		}
+	},
+	"styling": {
+		"colours": {
+			"background": "#1b1b1b",
+			"text": "#ffffff",
+			"primary": "#31cf9f",
+			"accent": "#fdf6e4"
+		},
+		"fonts": {
+			"main": ["Lato", "sans-serif"]
+		}
+	}
+}

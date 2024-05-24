@@ -5,35 +5,3 @@
 html {
 	scroll-behavior: smooth;
 }
-
-.hover-1 {
-	--c: #358b9b; /* the color */
-	--s: 0.15em;
-
-	line-height: 1.1em;
-	padding-bottom: calc(2.1 * var(--s));
-	background:
-		conic-gradient(from 135deg at top, var(--c) 90deg, #0000 0) left 0 bottom var(--s) /
-			calc(2 * var(--s)) var(--s) repeat-x,
-		conic-gradient(from -45deg at bottom, var(--c) 90deg, #0000 0) left var(--s) bottom 0 /
-			calc(2 * var(--s)) var(--s) repeat-x;
-	-webkit-mask:
-		linear-gradient(#000 0 0) content-box,
-		linear-gradient(#000 0 0) 0 / var(--_p, 0%) padding-box no-repeat;
-	transition: 0.5s;
-}
-.hover-1:hover {
-	--_p: 100%;
-	color: var(--c);
-}
-
-.btn-1 {
-	transition: all;
-	transition-duration: 0.5s;
-	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.btn-1:hover {
-	background: #31cf9f;
-	color: #1b1b1b;
-}
