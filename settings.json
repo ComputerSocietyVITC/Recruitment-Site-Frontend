@@ -17,41 +17,192 @@
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris"
 			}
 		],
+
+		"questions": [
+			{
+				"type": "text",
+				"question": "this is a text based response question",
+				"required": true
+			},
+			{
+				"type": "radio",
+				"question": "this is a radio single response question",
+				"options": ["Yes", "No"],
+				"required": false
+			},
+			{
+				"type": "checkbox",
+				"question": "this is a checkbox multiple response question",
+				"options": ["Yes", "No", "Maybe"],
+				"required": true
+			},
+			{
+				"type": "link",
+				"question": "this is a link based response question",
+				"required": false
+			}
+		],
+
 		"departments": [
 			{
 				"name": "Design",
 				"head": "Lead",
 				"linkedlin": "https://www.linkedin.com/",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
-				"icon": "design.svg"
+				"icon": "design.svg",
+
+				"questions": [
+					{
+						"type": "text",
+						"question": "this is a text based response question",
+						"required": true
+					},
+					{
+						"type": "radio",
+						"question": "this is a radio single response question",
+						"options": ["Yes", "No"],
+						"required": false
+					},
+					{
+						"type": "checkbox",
+						"question": "this is a checkbox multiple response question",
+						"options": ["Yes", "No", "Maybe"],
+						"required": true
+					},
+					{
+						"type": "link",
+						"question": "this is a link based response question",
+						"required": false
+					}
+				]
 			},
 			{
 				"name": "Technical",
 				"head": "Lead",
 				"linkedlin": "https://www.linkedin.com/",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
-				"icon": "technical.svg"
+				"icon": "technical.svg",
+
+				"questions": [
+					{
+						"type": "text",
+						"question": "this is a text based response question",
+						"required": true
+					},
+					{
+						"type": "radio",
+						"question": "this is a radio single response question",
+						"options": ["Yes", "No"],
+						"required": false
+					},
+					{
+						"type": "checkbox",
+						"question": "this is a checkbox multiple response question",
+						"options": ["Yes", "No", "Maybe"],
+						"required": true
+					},
+					{
+						"type": "link",
+						"question": "this is a link based response question",
+						"required": false
+					}
+				]
 			},
 			{
 				"name": "HR and Management",
 				"head": "Lead",
 				"linkedlin": "https://www.linkedin.com/",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
-				"icon": "management.svg"
+				"icon": "management.svg",
+
+				"questions": [
+					{
+						"type": "text",
+						"question": "this is a text based response question",
+						"required": true
+					},
+					{
+						"type": "radio",
+						"question": "this is a radio single response question",
+						"options": ["Yes", "No"],
+						"required": false
+					},
+					{
+						"type": "checkbox",
+						"question": "this is a checkbox multiple response question",
+						"options": ["Yes", "No", "Maybe"],
+						"required": true
+					},
+					{
+						"type": "link",
+						"question": "this is a link based response question",
+						"required": false
+					}
+				]
 			},
 			{
 				"name": "UI/UX",
 				"head": "Lead",
 				"linkedlin": "https://www.linkedin.com/",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
-				"icon": "ui-ux.svg"
+				"icon": "ui-ux.svg",
+
+				"questions": [
+					{
+						"type": "text",
+						"question": "this is a text based response question",
+						"required": true
+					},
+					{
+						"type": "radio",
+						"question": "this is a radio single response question",
+						"options": ["Yes", "No"],
+						"required": false
+					},
+					{
+						"type": "checkbox",
+						"question": "this is a checkbox multiple response question",
+						"options": ["Yes", "No", "Maybe"],
+						"required": true
+					},
+					{
+						"type": "link",
+						"question": "this is a link based response question",
+						"required": false
+					}
+				]
 			},
 			{
 				"name": "Social Media",
 				"head": "Lead",
 				"linkedlin": "https://www.linkedin.com/",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
-				"icon": "social-media.svg"
+				"icon": "social-media.svg",
+
+				"questions": [
+					{
+						"type": "text",
+						"question": "this is a text based response question",
+						"required": true
+					},
+					{
+						"type": "radio",
+						"question": "this is a radio single response question",
+						"options": ["Yes", "No"],
+						"required": false
+					},
+					{
+						"type": "checkbox",
+						"question": "this is a checkbox multiple response question",
+						"options": ["Yes", "No", "Maybe"],
+						"required": true
+					},
+					{
+						"type": "link",
+						"question": "this is a link based response question",
+						"required": false
+					}
+				]
 			}
 		],
 		"mediaPresence": {
@@ -62,10 +213,15 @@
 	},
 	"styling": {
 		"colours": {
-			"background": "#1b1b1b",
-			"text": "#ffffff",
+			"background-darker": "#010403",
+			"background": "#051510",
+			"background-lighter": "#0A291F",
+
 			"primary": "#31cf9f",
-			"accent": "#fdf6e4"
+
+			"foreground-darker": "#D5F6EB",
+			"foreground": "#EAFAF6",
+			"foreground-lighter": "#FBFEFD"
 		},
 		"fonts": {
 			"main": ["Lato", "sans-serif"]

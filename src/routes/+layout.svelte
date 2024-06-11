@@ -1,16 +1,21 @@
 <script>
 	import '../app.css';
 
-	import Navbar from '$lib/components/Navbar.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import { onMount } from 'svelte';
+
+	import { supabase } from '$lib/supabase';
+	import { user } from '$lib/stores';
+
+	onMount(async () => {
+		const { data } = await supabase.auth.getUser();
+
+		if (data.user) {
+			let user_data = await supabase.from('User').select().eq('email', data.user.email).single();
+			$user = { id: user_data.data.id, name: user_data.data.name, email: user_data.data.email };
+		}
+	});
 </script>
 
-<section class="bg-background text-text min-h-screen min-w-screen font-main">
-	<div class="flex flex-col w-[80%] mx-auto">
-		<Navbar />
-		<div class="flex-grow">
-			<slot />
-		</div>
-		<Footer />
-	</div>
+<section class="bg-background text-foreground-lighter min-h-screen min-w-screen font-main">
+	<slot />
 </section>

@@ -3,7 +3,7 @@
 </script>
 
 <footer
-	class="text-white flex flex-col gap-2 justify-center items-center w-full py-4 text-center"
+	class="flex flex-col gap-2 justify-center items-center w-full py-4 text-center"
 	id="contacts"
 >
 	<span class="text-lg text-center"

@@ -3,7 +3,7 @@
 	import { base } from '$app/paths';
 </script>
 
-<nav class="flex md:justify-between justify-center md:mt-0 mt-4 text-white px-8 py-4">
+<nav class="flex md:justify-between justify-center md:mt-0 mt-4 px-8 py-4">
 	<div class="md:flex hidden items-center md:text-2xl text-lg font-bold gap-4">
 		<img src="{base}/assets/{settings.club.logo}" alt="IEEE Comp Soc Logo" class="md:w-14 w-10" />
 		<span>{settings.club.name}</span>

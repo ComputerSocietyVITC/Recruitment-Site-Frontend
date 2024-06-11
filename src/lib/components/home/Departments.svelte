@@ -15,7 +15,7 @@
 		<div class="flex flex-col gap-4 items-center">
 			{#each settings.club.departments as element}
 				<div
-					class="flex flex-col items-center gap-4 border-2 border-primary text-text rounded-3xl p-4 w-[80%]"
+					class="flex flex-col items-center gap-4 border-2 border-primary rounded-3xl p-4 w-[80%]"
 				>
 					<div class="flex md:flex-row flex-col gap-4 translate-y-2 items-center justify-center">
 						<img
@@ -30,7 +30,7 @@
 								<strong>{element.head}</strong>
 								<a href={element.linkedlin}>
 									<i
-										class="fa-brands fa-linkedin-in bg-primary bg-opacity-25 rounded-lg border-2 border-primary text-text p-2"
+										class="fa-brands fa-linkedin-in bg-primary bg-opacity-25 rounded-lg border-2 border-primary p-2"
 									></i>
 								</a>
 							</div>
