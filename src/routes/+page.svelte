@@ -31,7 +31,7 @@
 			<button
 				on:click|preventDefault={async () => {
 					if ($user) {
-						// to question answer
+						goto('/forms');
 					} else {
 						goto('/auth');
 					}

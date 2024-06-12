@@ -20,7 +20,6 @@ model User {
 model Response {
   id String @id @default(uuid())
 
-  type     String
   question String
   response String
 

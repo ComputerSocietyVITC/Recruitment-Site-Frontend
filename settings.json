@@ -21,25 +21,37 @@
 		"questions": [
 			{
 				"type": "text",
-				"question": "this is a text based response question",
+				"question": "What is your registration number?",
+				"required": true
+			},
+			{
+				"type": "text",
+				"question": "What is your phone number (whatsapp enabled)?",
 				"required": true
 			},
 			{
 				"type": "radio",
-				"question": "this is a radio single response question",
-				"options": ["Yes", "No"],
-				"required": false
-			},
-			{
-				"type": "checkbox",
-				"question": "this is a checkbox multiple response question",
-				"options": ["Yes", "No", "Maybe"],
+				"question": "What is your first departmental preference",
+				"options": [
+					"Design",
+					"Technical",
+					"HR and Management",
+					"UI/UX",
+					"Social Media and Content"
+				],
 				"required": true
 			},
 			{
-				"type": "link",
-				"question": "this is a link based response question",
-				"required": false
+				"type": "radio",
+				"question": "What is your second departmental preference",
+				"options": [
+					"Design",
+					"Technical",
+					"HR and Management",
+					"UI/UX",
+					"Social Media and Content"
+				],
+				"required": true
 			}
 		],
 
@@ -173,7 +185,7 @@
 				]
 			},
 			{
-				"name": "Social Media",
+				"name": "Social Media and Content",
 				"head": "Lead",
 				"linkedlin": "https://www.linkedin.com/",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
@@ -213,7 +225,7 @@
 	},
 	"styling": {
 		"colours": {
-			"background-darker": "#010403",
+			"background-darker": "#04100C",
 			"background": "#051510",
 			"background-lighter": "#0A291F",
 
