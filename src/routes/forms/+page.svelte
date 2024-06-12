@@ -97,14 +97,14 @@
 		>
 			{#each questionsArray as question, idx}
 				<div class="flex flex-col w-[90%]">
-					<div class="flex items-center justify-between">
-						<span class="tracking-wide text-[1.5rem]">{idx + 1}. {question.question}</span>
+					<div class="flex md:flex-row flex-col md:items-center md:justify-between">
+						<span class="tracking-wide md:text-[1.5rem] ">{idx + 1}. {question.question}</span>
 						{#if question.required}
-							<span class="opacity-50">{question.required ? 'required' : ''}</span>
+							<span class="opacity-50 md:mt-0 mt-1">{question.required ? 'required' : ''}</span>
 						{/if}
 					</div>
 
-					<section class="w-full px-6 py-2">
+					<section class="w-full md:px-6 py-2">
 						{#if question.type === 'textarea'}
 							<Textarea response={question.response} question={question.question} />
 						{:else if question.type === 'text'}

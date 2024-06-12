@@ -16,7 +16,7 @@
 </script>
 
 <input
-	class="w-full rounded-sm bg-background-lighter border-4 p-2 border-background"
+	class="w-full rounded-lg bg-background-lighter border-4 p-2 border-background"
 	type="text"
 	placeholder="enter your response here..."
 	bind:value={response}
