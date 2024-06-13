@@ -25,7 +25,7 @@
 
 				if (!error) {
 					$user = { id: data.user?.id, name: name, email: email };
-					goto('/forms');
+					goto('/details');
 				} else {
 					console.error('signup failed: ' + populateUser.error?.message);
 				}
@@ -45,7 +45,7 @@
 			});
 			if (!error) {
 				$user = { id: data.user.id, name: name, email: email };
-				goto('/forms');
+				goto('/details');
 			} else {
 				console.error('login failed: ' + error.message);
 			}

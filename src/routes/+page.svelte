@@ -31,7 +31,7 @@
 			<button
 				on:click|preventDefault={async () => {
 					if ($user) {
-						goto('/forms');
+						goto('/details');
 					} else {
 						goto('/auth');
 					}
