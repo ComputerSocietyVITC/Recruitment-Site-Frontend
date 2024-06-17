@@ -72,49 +72,40 @@
 	<section class="h-screen w-screen absolute top-0 left-0 z-10 bg-background"></section>
 {:else}
 	<section class="flex flex-col gap-4">
-		<section class="text-4xl">
-			<div in:fade|local={{ duration: 2000, easing: cubicInOut }}>
+		<section class="md:text-4xl text-2xl px-4 md:px-0">
+			<div in:fade|local={{ duration: 2000, easing: cubicInOut }} class="md:w-[50rem] w-80">
 				{#if start}
 					<span> Hey {$user?.name}! Let's get to know you a bit better...</span>
 				{:else if questionIdx === 0}
-					<div
-						in:fade|local={{ duration: 2000, easing: cubicInOut }}
-						class="w-[50rem] flex flex-col gap-1"
-					>
+					<div in:fade|local={{ duration: 2000, easing: cubicInOut }} class="flex flex-col gap-1">
 						<label for="regNum" class="text-lg p-2">Enter your registration number</label>
 						<input
 							type="text"
 							name="regNum"
 							placeholder="Enter your registration number"
 							bind:value={registrationNumber}
-							class="w-[50rem] p-2 rounded-lg bg-background-lighter accent-black"
+							class="p-2 rounded-lg bg-background-lighter accent-black"
 						/>
 					</div>
 				{:else if questionIdx === 1}
-					<div
-						in:fade|local={{ duration: 2000, easing: cubicInOut }}
-						class="w-[50rem] flex flex-col gap-1"
-					>
+					<div in:fade|local={{ duration: 2000, easing: cubicInOut }} class="flex flex-col gap-1">
 						<label for="phoneNum" class="text-lg p-2">Enter your phone number</label>
 						<input
 							type="text"
 							name="phoneNum"
 							placeholder="Enter your phone number"
 							bind:value={phoneNumber}
-							class="w-[50rem] p-2 rounded-lg bg-background-lighter accent-black"
+							class="p-2 rounded-lg bg-background-lighter accent-black"
 						/>
 					</div>
 				{:else if questionIdx === 2}
-					<div
-						in:fade|local={{ duration: 2000, easing: cubicInOut }}
-						class="w-[50rem] flex flex-col gap-1"
-					>
-						<label for="regNum" class="text-3xl p-2"
+					<div in:fade|local={{ duration: 2000, easing: cubicInOut }} class="flex flex-col gap-1">
+						<label for="regNum" class="md:text-3xl text-xl p-2"
 							>What is your first departmental preference</label
 						>
 						{#each questions[2].options as option}
 							{#if option === firstPreference}
-								<div class="text-xl flex gap-2 items-center justify-start">
+								<div class="md:text-xl text-base flex gap-2 items-center justify-start">
 									<input
 										type="radio"
 										name="pref"
@@ -127,7 +118,7 @@
 									<label for="pref">{option}</label>
 								</div>
 							{:else}
-								<div class="text-xl flex gap-2 items-center justify-start">
+								<div class="md:text-xl text-base flex gap-2 items-center justify-start">
 									<input
 										type="radio"
 										name="pref"
@@ -143,16 +134,13 @@
 						{/each}
 					</div>
 				{:else if questionIdx === 3}
-					<div
-						in:fade|local={{ duration: 2000, easing: cubicInOut }}
-						class="w-[50rem] flex flex-col gap-1"
-					>
-						<label for="regNum" class="text-3xl p-2"
+					<div in:fade|local={{ duration: 2000, easing: cubicInOut }} class="flex flex-col gap-1">
+						<label for="regNum" class="md:text-3xl text-xl p-2"
 							>What is your second departmental preference</label
 						>
 						{#each questions[2].options as option}
 							{#if option === secondPreference}
-								<div class="text-xl flex gap-2 items-center justify-start">
+								<div class="md:text-xl text-base flex gap-2 items-center justify-start">
 									<input
 										type="radio"
 										name="pref"
@@ -165,7 +153,7 @@
 									<label for="pref">{option}</label>
 								</div>
 							{:else}
-								<div class="text-xl flex gap-2 items-center justify-start">
+								<div class="md:text-xl text-base flex gap-2 items-center justify-start">
 									<input
 										type="radio"
 										name="pref"
@@ -189,7 +177,7 @@
 		</section>
 
 		<section
-			class="flex justify-between opacity-30 text-lg"
+			class="flex justify-between opacity-40 text-lg px-4 md:px-0"
 			transition:fade={{ delay: 1500, duration: 500 }}
 		>
 			{#if start === false}
