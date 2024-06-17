@@ -18,43 +18,6 @@
 			}
 		],
 
-		"questions": [
-			{
-				"type": "text",
-				"question": "What is your registration number?",
-				"required": true
-			},
-			{
-				"type": "text",
-				"question": "What is your phone number (whatsapp enabled)?",
-				"required": true
-			},
-			{
-				"type": "radio",
-				"question": "What is your first departmental preference",
-				"options": [
-					"Design",
-					"Technical",
-					"HR and Management",
-					"UI/UX",
-					"Social Media and Content"
-				],
-				"required": true
-			},
-			{
-				"type": "radio",
-				"question": "What is your second departmental preference",
-				"options": [
-					"Design",
-					"Technical",
-					"HR and Management",
-					"UI/UX",
-					"Social Media and Content"
-				],
-				"required": true
-			}
-		],
-
 		"departments": [
 			{
 				"name": "Design",

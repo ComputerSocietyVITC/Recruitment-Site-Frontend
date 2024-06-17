@@ -84,7 +84,7 @@
 				/>
 			</div>
 			<div class="flex flex-col space-y-2">
-				<label for="password" class="text-base">Name</label>
+				<label for="password" class="text-base">Password</label>
 				<input
 					bind:value={password}
 					type="password"
