@@ -7,6 +7,7 @@
 	export let limit: number | undefined;
 	export let question: string;
 	export let response: string;
+	export let dept: string;
 
 	if (fields === undefined) {
 		fields = [];
@@ -33,7 +34,8 @@
 			.from('Response')
 			.update({ response: response })
 			.eq('question', question)
-			.eq('userId', $user?.id);
+			.eq('userId', $user?.id)
+			.eq('dept', dept);
 
 		console.log(data, error);
 	};

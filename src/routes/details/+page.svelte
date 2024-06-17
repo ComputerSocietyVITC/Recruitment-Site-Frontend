@@ -65,6 +65,15 @@
 		phoneNumber = data?.phoneNumber;
 		firstPreference = data?.firstPreference;
 		secondPreference = data?.secondPreference;
+
+		if (
+			registrationNumber !== null &&
+			phoneNumber !== null &&
+			firstPreference !== null &&
+			secondPreference !== null
+		) {
+			goto('/form');
+		}
 	});
 </script>
 

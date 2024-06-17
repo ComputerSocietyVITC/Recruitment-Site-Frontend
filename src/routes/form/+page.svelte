@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
+	import type { Response } from '../../app.d.ts';
+
 	import { goto } from '$app/navigation';
 
 	import { supabase } from '$lib/supabase';
@@ -14,11 +16,13 @@
 	import Radio from '$lib/components/forms/questions/Radio.svelte';
 	import Checkbox from '$lib/components/forms/questions/Checkbox.svelte';
 
-	let deptSelection = 1;
-	let preferredDepartments = [];
+	let firstPref = '';
+	let secondPref = '';
 
-	let questionsArray: { question: string; response: string; type: string; required: boolean }[] =
-		[];
+	let firstPrefResponses: Response[] = [];
+	let secondPrefResponses: Response[] = [];
+
+	let selected = 'firstPref';
 
 	let loading = true;
 
@@ -37,7 +41,78 @@
 			loading = false;
 		}
 
-		
+		let { data, error } = await supabase
+			.from('User')
+			.select('firstPreference, secondPreference')
+			.eq('id', $user.id)
+			.single();
+
+		firstPref = data?.firstPreference;
+
+		if (firstPref) {
+			let { data, error } = await supabase
+				.from('Response')
+				.select()
+				.eq('userId', $user.id)
+				.eq('dept', firstPref);
+
+			if (error) console.error(error);
+
+			if (data === null || data.length === 0) {
+				const firstPrefObj = settings.club.departments.find((item) => item.name === firstPref);
+				const updatedQuestions = firstPrefObj?.questions.map((question) => ({
+					id: generateUUID(),
+					question: question.question,
+					response: '',
+					dept: firstPref,
+					userId: $user?.id,
+					type: question.type,
+					limit: question.limit,
+					options: question.options
+				}));
+
+				firstPrefResponses = updatedQuestions;
+
+				let { data, error } = await supabase.from('Response').insert(updatedQuestions);
+
+				if (error) console.error(error);
+			} else {
+				firstPrefResponses = data;
+			}
+		}
+
+		secondPref = data?.secondPreference;
+
+		if (secondPref) {
+			let { data, error } = await supabase
+				.from('Response')
+				.select()
+				.eq('userId', $user.id)
+				.eq('dept', secondPref);
+
+			if (error) console.error(error);
+
+			if (data === null || data.length === 0) {
+				const secondPrefObj = settings.club.departments.find((item) => item.name === secondPref);
+				const updatedQuestions = secondPrefObj?.questions.map((question) => ({
+					id: generateUUID(),
+					question: question.question,
+					response: '',
+					dept: secondPref,
+					userId: $user?.id,
+					type: question.type,
+					limit: question.limit,
+					options: question.options
+				}));
+
+				secondPrefResponses = updatedQuestions;
+
+				let { data, error } = await supabase.from('Response').insert(updatedQuestions);
+				if (error) console.error(error);
+			} else {
+				secondPrefResponses = data;
+			}
+		}
 	});
 </script>
 
@@ -48,12 +123,98 @@
 		class="flex gap-4 border-2 border-background-lighter bg-background-darker rounded-lg p-4 mt-2 overflow-auto"
 	>
 		<section
-			class="border-r-2 border-background-lighter h-full p-2 flex gap-2 flex-col justify-between"
+			class="border-r-2 border-background-lighter w-80 p-4 flex gap-2 flex-col justify-around fixed h-[45rem]"
 		>
+			<button
+				on:click={() => {
+					selected = 'firstPref';
+				}}
+				class="text-xl border-2 rounded-lg border-background-lighter p-4 transition-all duration-300 {selected ===
+				'firstPref'
+					? 'border-primary border-opacity-50'
+					: ''}">{firstPref}</button
+			>
+			<button
+				on:click={() => {
+					selected = 'secondPref';
+				}}
+				class="text-xl border-2 rounded-lg border-background-lighter p-4 transition-all duration-300 {selected ===
+				'secondPref'
+					? 'border-primary border-opacity-50'
+					: ''}">{secondPref}</button
+			>
 			{#each settings.club.departments as dept, i}
-				<span class="text-xl border-2 rounded-lg border-background-lighter p-4">{dept.name}</span>
+				{#if dept.name !== firstPref && dept.name !== secondPref}
+					<span class="text-xl border-2 rounded-lg border-background-lighter p-4 opacity-25"
+						>{dept.name}</span
+					>
+				{/if}
 			{/each}
 		</section>
-		<section class="border-2 border-primary rounded-lg h-full">hello</section>
+		<section class="w-full p-6 flex flex-col gap-4 h-[45rem] ml-80">
+			{#if selected === 'firstPref'}
+				{#each firstPrefResponses as question, i}
+					<div class="flex justify-between">
+						<span class="text-xl">{i + 1}. {question.question}</span>
+						<span>{question.required ? 'required' : ''}</span>
+					</div>
+					{#if question.type === 'text'}
+						<Text question={question.question} response={question.response} dept={question.dept} />
+					{:else if question.type === 'textarea'}
+						<Textarea
+							question={question.question}
+							response={question.response}
+							dept={question.dept}
+						/>
+					{:else if question.type === 'radio'}
+						<Radio
+							question={question.question}
+							response={question.response}
+							fields={question.options}
+							dept={question.dept}
+						/>
+					{:else if question.type === 'checkbox'}
+						<Checkbox
+							question={question.question}
+							response={question.response}
+							fields={question.options}
+							limit={question.limit}
+							dept={question.dept}
+						/>
+					{/if}
+				{/each}
+			{:else if selected === 'secondPref'}
+				{#each secondPrefResponses as question, i}
+					<div class="flex justify-between">
+						<span class="text-xl">{i + 1}. {question.question}</span>
+						<span>{question.required ? 'required' : ''}</span>
+					</div>
+					{#if question.type === 'text'}
+						<Text question={question.question} response={question.response} dept={question.dept} />
+					{:else if question.type === 'textarea'}
+						<Textarea
+							question={question.question}
+							response={question.response}
+							dept={question.dept}
+						/>
+					{:else if question.type === 'radio'}
+						<Radio
+							question={question.question}
+							response={question.response}
+							fields={question.options}
+							dept={question.dept}
+						/>
+					{:else if question.type === 'checkbox'}
+						<Checkbox
+							question={question.question}
+							response={question.response}
+							fields={question.options}
+							dept={question.dept}
+							limit={question.limit}
+						/>
+					{/if}
+				{/each}
+			{/if}
+		</section>
 	</section>
 {/if}

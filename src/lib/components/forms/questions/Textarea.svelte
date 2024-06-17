@@ -5,13 +5,15 @@
 
 	export let question: string;
 	export let response: string;
+	export let dept: string;
 
 	const updateResponse = async () => {
 		const { data, error } = await supabase
 			.from('Response')
 			.update({ response: response })
 			.eq('question', question)
-			.eq('userId', $user?.id);
+			.eq('userId', $user?.id)
+			.eq('dept', dept);
 	};
 </script>
 

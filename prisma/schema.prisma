@@ -29,6 +29,12 @@ model Response {
   question String
   response String
 
+  dept     String
+  type     String
+  options  Json?
+  limit    Int?
+  required Boolean?
+
   user   User   @relation(fields: [userId], references: [id])
   userId String
 }

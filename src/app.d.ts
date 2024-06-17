@@ -4,4 +4,16 @@ interface User {
 	email: string;
 }
 
-export { User };
+interface Response {
+	question: string;
+	response: string;
+	id: string;
+	userId: string;
+	type: string;
+	dept: string;
+
+	options: string[]?;
+	limit: int?;
+}
+
+export { User, Response };

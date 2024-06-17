@@ -6,6 +6,7 @@
 	export let question: string;
 	export let response: string;
 	export let fields: string[] | undefined;
+	export let dept: string;
 
 	if (fields === undefined) {
 		fields = [];
@@ -13,15 +14,14 @@
 
 	let checked = '';
 
-	const updateResponse = async () => {};
-
 	const handleRadioChange = async (event: Event) => {
 		const target = event.target as HTMLInputElement;
 		const { data, error } = await supabase
 			.from('Response')
 			.update({ response: target.value })
 			.eq('question', question)
-			.eq('userId', $user?.id);
+			.eq('userId', $user?.id)
+			.eq('dept', dept);
 
 		console.log(data, error);
 	};
