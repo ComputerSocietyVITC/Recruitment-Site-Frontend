@@ -5,15 +5,17 @@ interface User {
 }
 
 interface Response {
+	id: string;
 	question: string;
 	response: string;
-	id: string;
-	userId: string;
+	userId: string | undefined;
 	type: string;
 	dept: string;
 
-	options: string[]?;
-	limit: int?;
+	required: boolean | undefined;
+	options: string[] | undefined;
+	limit: number | undefined;
 }
+
 
 export { User, Response };

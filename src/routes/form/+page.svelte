@@ -68,10 +68,13 @@
 					userId: $user?.id,
 					type: question.type,
 					limit: question.limit,
-					options: question.options
+					options: question.options,
+					required: question.required
 				}));
 
-				firstPrefResponses = updatedQuestions;
+				if (updatedQuestions) {
+					firstPrefResponses = updatedQuestions;
+				}
 
 				let { data, error } = await supabase.from('Response').insert(updatedQuestions);
 
@@ -102,10 +105,13 @@
 					userId: $user?.id,
 					type: question.type,
 					limit: question.limit,
-					options: question.options
+					options: question.options,
+					required: question.required
 				}));
 
-				secondPrefResponses = updatedQuestions;
+				if (updatedQuestions) {
+					secondPrefResponses = updatedQuestions;
+				}
 
 				let { data, error } = await supabase.from('Response').insert(updatedQuestions);
 				if (error) console.error(error);

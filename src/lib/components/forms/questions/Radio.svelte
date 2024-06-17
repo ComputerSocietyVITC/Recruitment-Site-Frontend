@@ -5,10 +5,10 @@
 
 	export let question: string;
 	export let response: string;
-	export let fields: string[] | undefined;
+	export let fields: string[] | undefined | null;
 	export let dept: string;
 
-	if (fields === undefined) {
+	if (fields === undefined || fields === null) {
 		fields = [];
 	}
 

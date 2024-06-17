@@ -3,13 +3,13 @@
 	import { user } from '$lib/stores';
 	import { onMount } from 'svelte';
 
-	export let fields: string[] | undefined;
+	export let fields: string[] | undefined | null;
 	export let limit: number | undefined;
 	export let question: string;
 	export let response: string;
 	export let dept: string;
 
-	if (fields === undefined) {
+	if (fields === undefined || fields === null) {
 		fields = [];
 	}
 
