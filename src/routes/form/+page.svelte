@@ -125,11 +125,31 @@
 {#if loading === true}
 	<section class="h-screen w-screen absolute top-0 left-0 z-10 bg-background"></section>
 {:else}
+	<section class="md:hidden py-4 flex justify-around w-full border-2 border-background-lighter rounded-lg bg-background-darker">
+		<button
+			on:click={() => {
+				selected = 'firstPref';
+			}}
+			class="transition-all duration-300 {selected ===
+			'firstPref'
+				? 'underline  underline-offset-8'
+				: ''}">{firstPref}</button
+		>
+		<button
+			on:click={() => {
+				selected = 'secondPref';
+			}}
+			class="transition-all duration-300 {selected ===
+			'secondPref'
+				? 'underline underline-offset-8'
+				: ''}">{secondPref}</button
+		>
+	</section>
 	<section
 		class="flex gap-4 border-2 border-background-lighter bg-background-darker rounded-lg p-4 mt-2 overflow-auto"
 	>
 		<section
-			class="border-r-2 border-background-lighter w-80 p-4 flex gap-2 flex-col justify-around fixed h-[45rem]"
+			class="border-r-2 border-background-lighter w-80 p-4 md:flex gap-2 flex-col justify-around fixed h-[45rem] hidden"
 		>
 			<button
 				on:click={() => {
@@ -157,11 +177,11 @@
 				{/if}
 			{/each}
 		</section>
-		<section class="w-full p-6 flex flex-col gap-4 h-[45rem] ml-80">
+		<section class="w-full md:p-6 p-2 flex flex-col gap-4 md:h-[45rem] md:ml-80">
 			{#if selected === 'firstPref'}
 				{#each firstPrefResponses as question, i}
-					<div class="flex justify-between">
-						<span class="text-xl">{i + 1}. {question.question}</span>
+					<div class="flex justify-between gap-2">
+						<span class="md:text-xl">{i + 1}. {question.question}</span>
 						<span>{question.required ? 'required' : ''}</span>
 					</div>
 					{#if question.type === 'text'}
@@ -192,7 +212,7 @@
 			{:else if selected === 'secondPref'}
 				{#each secondPrefResponses as question, i}
 					<div class="flex justify-between">
-						<span class="text-xl">{i + 1}. {question.question}</span>
+						<span class="md:text-xl">{i + 1}. {question.question}</span>
 						<span>{question.required ? 'required' : ''}</span>
 					</div>
 					{#if question.type === 'text'}

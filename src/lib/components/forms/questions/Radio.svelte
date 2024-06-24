@@ -42,7 +42,7 @@
 				on:change|preventDefault={handleRadioChange}
 				class="accent-primary"
 			/>
-			<span class="opacity-80">
+			<span class="text-base">
 				{field}
 			</span>
 		</div>
