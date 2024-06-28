@@ -1,7 +1,7 @@
 {
 	"club": {
-		"name": "Club Name",
-		"logo": "logo.png",
+		"name": "Computer Society",
+		"logo": "logo.webp",
 		"about": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
 		"principles": [
 			{
@@ -193,18 +193,13 @@
 	},
 	"styling": {
 		"colours": {
-			"background-darker": "#04100C",
-			"background": "#051510",
-			"background-lighter": "#0A291F",
-
+			"background": "#0F0F0F",
 			"primary": "#31cf9f",
-
-			"foreground-darker": "#D5F6EB",
-			"foreground": "#EAFAF6",
-			"foreground-lighter": "#FBFEFD"
+			"foreground": "#EFECE6"
 		},
 		"fonts": {
-			"main": ["Lato", "sans-serif"]
+			"main": ["Lato", "sans-serif"],
+			"header": ["Encode Sans", "sans-serif"]
 		}
 	}
 }

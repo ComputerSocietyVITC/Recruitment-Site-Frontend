@@ -3,13 +3,12 @@
 	import { base } from '$app/paths';
 </script>
 
-<nav class="flex md:justify-between justify-center md:mt-0 mt-4 px-8 py-4">
-	<div class="md:flex hidden items-center md:text-2xl text-lg font-bold gap-4">
+<nav class="bg-background flex md:justify-between justify-center items-center md:mt-0 md:py-8 py-8 ">
+	<div class="flex gap-4 items-center md:text-4xl text-2xl font-semibold">
 		<img src="{base}/assets/{settings.club.logo}" alt="club Logo" class="md:w-14 w-10" />
-		<span>{settings.club.name}</span>
+		<span class="-translate-y-0.5">{settings.club.name}</span>
 	</div>
-	<div class="flex md:gap-12 gap-4 items-center md:text-xl text-sm font-semibold">
-		<a href="{base}/#principles"><div>Principles</div></a>
-		<a href="{base}/#departments"><div>Departments</div></a>
-	</div>
+	<button class="md:flex hidden bg-foreground text-background w-[10%] rounded-xl text-xl font-semibold py-4 hover:bg-primary transition-colors ease-in-out duration-300"
+		>Join Us</button
+	>
 </nav>
