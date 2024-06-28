@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 </script>
 
 <section class="flex md:flex-row flex-col items-center justify-center md:gap-20 gap-8 h-[50rem]">
@@ -25,14 +26,14 @@
 		<div class="flex justify-around">
 			<div>
 				<img
-					src="/splash/gif1.gif"
+					src="{base}/splash/gif1.gif"
 					alt="gif1"
 					class="w-80 rounded-[3rem] border-b-[6px] border-r-[6px] border-purple-400"
 				/>
 			</div>
 			<div>
 				<img
-					src="/splash/gif2.gif"
+					src="{base}/splash/gif2.gif"
 					alt="gif2"
 					class="w-80 rounded-[3rem] border-b-[6px] border-r-[6px] border-green-400"
 				/>
@@ -41,14 +42,14 @@
 		<div class="flex justify-around md:translate-x-32 translate-x-6">
 			<div>
 				<img
-					src="/splash/gif3.gif"
+					src="{base}/splash/gif3.gif"
 					alt="gif3"
 					class="w-80 rounded-[3rem] border-b-[6px] border-r-[6px] border-orange-400"
 				/>
 			</div>
 			<div>
 				<img
-					src="/splash/gif4.gif"
+					src="{base}/splash/gif4.gif"
 					alt="gif4"
 					class="w-80 rounded-[3rem] border-b-[6px] border-r-[6px] border-blue-400"
 				/>
@@ -57,14 +58,14 @@
 		<div class="flex justify-around md:-translate-x-32 -translate-x-6">
 			<div>
 				<img
-					src="/splash/gif5.gif"
+					src="{base}/splash/gif5.gif"
 					alt="gif5"
 					class="w-80 rounded-[3rem] border-b-[6px] border-r-[6px] border-cyan-300"
 				/>
 			</div>
 			<div>
 				<img
-					src="/splash/gif6.gif"
+					src="{base}/splash/gif6.gif"
 					alt="gif6"
 					class="w-80 rounded-[3rem] border-b-[6px] border-r-[6px] border-yellow-400"
 				/>
