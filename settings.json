@@ -3,26 +3,12 @@
 		"name": "Computer Society",
 		"logo": "logo.webp",
 		"about": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
-		"principles": [
-			{
-				"name": "principle one",
-				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris"
-			},
-			{
-				"name": "principle two",
-				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris"
-			},
-			{
-				"name": "principle three",
-				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris"
-			}
-		],
-
 		"departments": [
 			{
-				"name": "Design",
-				"head": "Lead",
-				"linkedlin": "https://www.linkedin.com/",
+				"name": "UI/UX and Design",
+				"head": "Mrithula and Jasmine",
+				"linkedlin1": "https://www.linkedin.com/",
+				"linkedlin2": "https://www.linkedin.com/",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
 				"icon": "design.svg",
 
@@ -54,7 +40,7 @@
 			},
 			{
 				"name": "Technical",
-				"head": "Lead",
+				"head": "Sam Shervin",
 				"linkedlin": "https://www.linkedin.com/",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
 				"icon": "technical.svg",
@@ -87,7 +73,7 @@
 			},
 			{
 				"name": "HR and Management",
-				"head": "Lead",
+				"head": "Anirudh Sridhar",
 				"linkedlin": "https://www.linkedin.com/",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
 				"icon": "management.svg",
@@ -119,41 +105,8 @@
 				]
 			},
 			{
-				"name": "UI/UX",
-				"head": "Lead",
-				"linkedlin": "https://www.linkedin.com/",
-				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
-				"icon": "ui-ux.svg",
-
-				"questions": [
-					{
-						"type": "text",
-						"question": "this is a text based response question",
-						"required": true
-					},
-					{
-						"type": "radio",
-						"question": "this is a radio single response question",
-						"options": ["Yes", "No"],
-						"required": false
-					},
-					{
-						"type": "checkbox",
-						"question": "this is a checkbox multiple response question",
-						"options": ["Yes", "No", "Maybe"],
-						"limit": 2,
-						"required": true
-					},
-					{
-						"type": "text",
-						"question": "this is a link based response question",
-						"required": false
-					}
-				]
-			},
-			{
 				"name": "Social Media and Content",
-				"head": "Lead",
+				"head": "Teeshta Parmar",
 				"linkedlin": "https://www.linkedin.com/",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
 				"icon": "social-media.svg",

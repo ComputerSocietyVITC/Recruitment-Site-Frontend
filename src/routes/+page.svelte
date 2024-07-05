@@ -1,15 +1,20 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 
+	import { base } from '$app/paths';
+
 	import settings from '$lib/settings';
 
 	import Splash from '$lib/components/home/Splash.svelte';
 	import Marquee from '$lib/components/home/Marquee.svelte';
+	import Department from '$lib/components/home/Department.svelte';
 
 	import { user } from '$lib/stores';
 </script>
 
 <main class="flex flex-col">
+	<!-- splash -->
+
 	<section class="flex flex-col justify-around md:gap-24 gap-12">
 		<Splash />
 		<section class="relative">
@@ -21,9 +26,12 @@
 			</section>
 		</section>
 	</section>
+
+	<!-- joinus -->
+
 	<section class="md:mt-36 mt-20 flex md:flex-row flex-col md:gap-24 gap-8">
 		<section class="md:flex hidden bg-background p-2 border-foreground border-4 rounded-3xl w-full">
-			<img src="/joinus5s.gif" alt="joinus" class="rounded-xl" />
+			<img src="{base}/joinus5s.gif" alt="joinus" class="rounded-xl" />
 		</section>
 		<section class="flex flex-col gap-4 md:w-[75%]">
 			<span class="font-header md:text-5xl text-4xl font-bold">But Why Join Us?</span>
@@ -50,7 +58,13 @@
 			>
 		</section>
 		<section class="md:hidden bg-background p-2 border-foreground border-4 rounded-3xl w-full">
-			<img src="/joinus5s.gif" alt="joinus" class="rounded-xl" />
+			<img src="{base}/joinus5s.gif" alt="joinus" class="rounded-xl" />
 		</section>
+	</section>
+
+	<!-- departments -->
+
+	<section class="mt-12">
+		<Department />
 	</section>
 </main>
