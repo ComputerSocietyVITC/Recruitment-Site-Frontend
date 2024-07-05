@@ -8,7 +8,7 @@
 		<img src="{base}/assets/{settings.club.logo}" alt="club Logo" class="md:w-14 w-10" />
 		<span class="-translate-y-0.5">{settings.club.name}</span>
 	</div>
-	<button class="md:flex hidden bg-foreground text-background w-[10%] rounded-xl text-xl font-semibold py-4 hover:bg-primary transition-colors ease-in-out duration-300"
+	<button class="md:flex items-center justify-center hidden bg-foreground text-background w-[10%] rounded-xl text-xl font-semibold py-4 hover:bg-primary transition-colors ease-in-out duration-300"
 		>Join Us</button
 	>
 </nav>
