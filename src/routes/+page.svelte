@@ -10,9 +10,9 @@
 </script>
 
 <main class="flex flex-col relative">
-	<section class="flex flex-col justify-around h-screen">
+	<section class="flex flex-col justify-around md:gap-24 gap-12">
 		<Splash />
-		<section class="relative md:mt-0 mt-6">
+		<section class="relative">
 			<section class="md:skew-y-2 skew-y-[8deg] border-4 border-background absolute w-full">
 				<Marquee direction="left" />
 			</section>
