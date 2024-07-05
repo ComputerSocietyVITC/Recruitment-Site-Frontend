@@ -9,6 +9,8 @@
 	import Marquee from '$lib/components/home/Marquee.svelte';
 	import Department from '$lib/components/home/Department.svelte';
 
+	import Footer from '$lib/components/home/Footer.svelte';
+
 	import { user } from '$lib/stores';
 </script>
 
@@ -66,5 +68,9 @@
 
 	<section class="mt-12">
 		<Department />
+	</section>
+
+	<section>
+		<Footer />
 	</section>
 </main>

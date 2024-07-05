@@ -18,7 +18,9 @@
 	});
 </script>
 
-<section class="bg-background text-foreground min-h-screen min-w-screen font-main mx-auto md:w-[80%] p-4 overflow-hidden">
+<section
+	class="bg-background text-foreground min-h-screen min-w-screen font-main mx-auto md:w-[80%] p-4 overflow-hidden"
+>
 	<Navbar />
 	<div class="flex-grow">
 		<slot />
