@@ -14,6 +14,9 @@ importers:
       '@supabase/supabase-js':
         specifier: ^2.43.4
         version: 2.43.4
+      svelte-fast-marquee:
+        specifier: ^0.7.0
+        version: 0.7.0
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^3.0.0
@@ -599,6 +602,10 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
+
+  axobject-query@3.2.4:
+    resolution: {integrity: sha512-aPTElBrbifBU1krmZxGZOlBkslORe7Ll7+BDnI50Wy4LgOt69luMgevkDfTq1O/ZgprooPCtWpjCwKSZw/iZ4A==}
+    engines: {node: '>= 0.4'}
 
   axobject-query@4.0.0:
     resolution: {integrity: sha512-+60uv1hiVFhHZeO+Lz0RYzsVHy5Wr1ayX0mwda9KPDVLNJgZ1T9Ny7VmFbLDzxsH0D87I86vgj3gFrjTJUYznw==}
@@ -1386,6 +1393,9 @@ packages:
       svelte:
         optional: true
 
+  svelte-fast-marquee@0.7.0:
+    resolution: {integrity: sha512-tAttI/fs2ISYeRqU6w6zsPNjVAQBXt7dS0uGegn17XfQkLn57idxuXRlNee1aTfG3zlEaidbgd2odyoDNttj3Q==}
+
   svelte-hmr@0.15.3:
     resolution: {integrity: sha512-41snaPswvSf8TJUhlkoJBekRrABDXDMdpNpT2tfHIv4JuhgvHqLMhEPGtaQn0BmbNSTkuz2Ed20DF2eHw0SmBQ==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
@@ -1428,6 +1438,10 @@ packages:
         optional: true
       typescript:
         optional: true
+
+  svelte@4.2.0:
+    resolution: {integrity: sha512-kVsdPjDbLrv74SmLSUzAsBGquMs4MPgWGkGLpH+PjOYnFOziAvENVzgJmyOCV2gntxE32aNm8/sqNKD6LbIpeQ==}
+    engines: {node: '>=16'}
 
   svelte@4.2.12:
     resolution: {integrity: sha512-d8+wsh5TfPwqVzbm4/HCXC783/KPHV60NvwitJnyTA5lWn1elhXMNWhXGCJ7PwPa8qFUnyJNIyuIRt2mT0WMug==}
@@ -2070,6 +2084,8 @@ snapshots:
       picocolors: 1.0.0
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
+
+  axobject-query@3.2.4: {}
 
   axobject-query@4.0.0:
     dependencies:
@@ -2873,6 +2889,10 @@ snapshots:
     optionalDependencies:
       svelte: 4.2.12
 
+  svelte-fast-marquee@0.7.0:
+    dependencies:
+      svelte: 4.2.0
+
   svelte-hmr@0.15.3(svelte@4.2.12):
     dependencies:
       svelte: 4.2.12
@@ -2889,6 +2909,22 @@ snapshots:
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
       typescript: 5.4.4
+
+  svelte@4.2.0:
+    dependencies:
+      '@ampproject/remapping': 2.3.0
+      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/trace-mapping': 0.3.25
+      acorn: 8.11.3
+      aria-query: 5.3.0
+      axobject-query: 3.2.4
+      code-red: 1.0.4
+      css-tree: 2.3.1
+      estree-walker: 3.0.3
+      is-reference: 3.0.2
+      locate-character: 3.0.0
+      magic-string: 0.30.9
+      periscopic: 3.1.0
 
   svelte@4.2.12:
     dependencies:

@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 </script>
 
-<section class="flex md:flex-row flex-col md:gap-20 gap-8 h-[45rem] items-center">
+<section class="flex md:flex-row flex-col md:gap-20 gap-8 items-center">
 	<section class="md:w-[50%]">
 		<div class="flex flex-col gap-4 md:text-left text-center">
 			<span class="font-header md:text-8xl text-6xl font-extrabold tracking-wider" id="splash-text"
@@ -16,7 +16,7 @@
 			<div class="flex md:flex-row flex-col gap-4 items-center md:gap-6 md:text-3xl text-2xl">
 				<span> so what are you waiting for? </span>
 				<button
-					class="bg-foreground text-background py-2 px-8 rounded-xl font-semibold text-xl hover:bg-primary transition-all duration-300"
+					class="md:bg-foreground text-background bg-primary py-2 px-8 rounded-xl font-semibold text-xl hover:bg-primary transition-all duration-300"
 					>Join Us</button
 				>
 			</div>
