@@ -45,7 +45,6 @@
 					<span class="text-lg flex-grow">{department.description}</span>
 					<div class="flex gap-4 items-center justify-end w-full text-2xl">
 						<span>{department.head}</span>
-						<i class="fa-brands fa-linkedin text-4xl"></i>
 					</div>
 				</div>
 			{/each}

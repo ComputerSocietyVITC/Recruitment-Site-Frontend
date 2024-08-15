@@ -8,11 +8,12 @@
 			<span class="font-header md:text-8xl text-6xl font-extrabold tracking-wider" id="splash-text"
 				>IEEE <br /> COMPUTER <br /> SOCIETY
 			</span>
-			<span class="text-lg"
-				>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sit eveniet voluptatum,
-				voluptatibus excepturi officiis? Quas dicta quo itaque cupiditate sint, nesciunt iure nulla
-				laborum nostrum tempora iste quidem blanditiis.</span
-			>
+			<span class="text-lg">
+				An active club that plays a key role in shaping the college's infrastructure by supporting
+				major events like TechnoVIT, Vibrance, and Voyage. Get hands-on experience in building
+				products from scratch, with regular workshops, seminars, and project showcases to help you
+				grow.
+			</span>
 			<div class="flex md:flex-row flex-col gap-4 items-center md:gap-6 md:text-3xl text-2xl">
 				<span> so what are you waiting for? </span>
 				<button

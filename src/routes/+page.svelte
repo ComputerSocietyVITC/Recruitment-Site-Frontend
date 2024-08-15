@@ -39,19 +39,19 @@
 			<span class="font-header md:text-5xl text-4xl font-bold">But Why Join Us?</span>
 			<div class="text-xl w-fit flex flex-col gap-2">
 				<span>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, quia? Ipsam qui saepe,
-					magni debitis, asperiores provident sint repellat hic optio repellendus eaque cupiditate
-					atque nostrum ea eligendi? Mollitia, possimus?
+					IEEE Computer Society is one of VIT Chennai's active and recognized technical clubs. 
+					We work on building and contributing to our college's infrastructure, powering our mega 
+					events like <strong>TechnoVIT</strong>, <strong>Vibrance</strong> and now most recently
+					<strong>Voyage</strong>. 
 				</span>
 				<span>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, quia? Ipsam qui saepe,
-					magni debitis, asperiores provident sint repellat hic optio repellendus eaque cupiditate
-					atque nostrum ea eligendi? Mollitia, possimus?
+					Join Computer Society if you want to learn while contributing to a community that actually
+					validates your contributions be it in the technical or non technical domain.
 				</span>
-				<span class="md:flex hidden">
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, quia? Ipsam qui saepe,
-					magni debitis, asperiores provident sint repellat hic optio repellendus eaque cupiditate
-					atque nostrum ea eligendi? Mollitia, possimus?
+				<span>
+					We will teach you the skills that are needed to build and deliver products from scratch via
+					our subsidiary organization <strong>Builder's Hut</strong> where we encourage project based 
+					learning by holding monthly workshops, seminars and project showcase sessions.
 				</span>
 			</div>
 			<button
