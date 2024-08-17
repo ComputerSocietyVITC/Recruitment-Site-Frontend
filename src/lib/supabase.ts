@@ -1,4 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
-import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public';
+
+const PUBLIC_SUPABASE_URL = 'https://niuwcymvlfmcrhzturbo.supabase.co';
+
+const PUBLIC_SUPABASE_ANON_KEY =
+	'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5pdXdjeW12bGZtY3JoenR1cmJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjM4ODAyMDAsImV4cCI6MjAzOTQ1NjIwMH0.PzTymfMbZYX-2MLqCN79ljwyGIO33sWj0S2AhTH6BGY';
 
 export const supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY);

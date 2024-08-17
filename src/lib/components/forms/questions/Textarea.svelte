@@ -14,6 +14,8 @@
 			.select('response')
 			.eq('questionId', questionId)
 			.single();
+
+		console.log(responseDB)
 		
 		if (responseDB === null) {
 			const error = await supabase
@@ -34,6 +36,7 @@
 			.update({ response })
 			.eq('questionId', questionId);
 
+		console.log(data, error)
 	};
 </script>
 

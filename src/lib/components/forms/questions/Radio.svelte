@@ -26,6 +26,8 @@
 			.single();
 
 
+		console.log(responseDB)
+
 		if (responseDB === null) {
 			const error = await supabase
 				.from('AnswerMapping')
@@ -46,7 +48,7 @@
 			.from('AnswerMapping')
 			.update({ response: target.value })
 			.eq('questionId', questionId);
-
+		console.log(data, error)
 	};
 </script>
 
