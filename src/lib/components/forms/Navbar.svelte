@@ -5,7 +5,7 @@
 
 	import { base } from '$app/paths';
 	import { supabase } from '$lib/supabase';
-	import { user } from '$lib/stores';
+	import { user, changeDetails } from '$lib/stores';
 </script>
 
 <nav class="flex md:justify-between justify-center md:mt-0 mt-4 py-4">
@@ -15,6 +15,12 @@
 	</div>
 	<div class="flex md:gap-12 gap-4 items-center md:text-xl text-sm font-semibold">
 		<a href="{base}/"><div>Home</div></a>
+		<button
+			on:click|preventDefault={async () => {
+				$changeDetails = true;
+				goto('/details');
+			}}>Details</button
+		>
 		<button
 			on:click|preventDefault={async () => {
 				$user = null;

@@ -2,135 +2,31 @@
 	"club": {
 		"name": "Computer Society",
 		"logo": "logo.webp",
-		"about": "The IEEE Computer Society at VIT Chennai is an active club that plays a key role in shaping the college's infrastructure and supporting major events like TechnoVIT, Vibrance, and Voyage. It's a great place to grow, whether you're into tech or non-tech fields. By joining, you'll learn valuable skills and contribute meaningfully to real projects. Through our Builder's Hut initiative, you'll get hands-on experience in building products from scratch, with regular workshops, seminars, and project showcases to help you grow.",
+
 		"departments": [
 			{
 				"name": "UI/UX and Design",
 				"head": "Mrithula and Jasmine",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
-				"icon": "design.svg",
-
-				"questions": [
-					{
-						"type": "text",
-						"question": "this is a text based response question",
-						"required": true
-					},
-					{
-						"type": "radio",
-						"question": "this is a radio single response question",
-						"options": ["Yes", "No"],
-						"required": false
-					},
-					{
-						"type": "checkbox",
-						"question": "this is a checkbox multiple response question",
-						"options": ["Yes", "No", "Maybe"],
-						"limit": 2,
-						"required": true
-					},
-					{
-						"type": "text",
-						"question": "this is a link based response question",
-						"required": false
-					}
-				]
+				"icon": "design.svg"
 			},
 			{
 				"name": "Technical",
 				"head": "Sam Shervin",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
-				"icon": "technical.svg",
-
-				"questions": [
-					{
-						"type": "text",
-						"question": "this is a text based response question",
-						"required": true
-					},
-					{
-						"type": "radio",
-						"question": "this is a radio single response question",
-						"options": ["Yes", "No"],
-						"required": false
-					},
-					{
-						"type": "checkbox",
-						"question": "this is a checkbox multiple response question",
-						"options": ["Yes", "No", "Maybe"],
-						"limit": 2,
-						"required": true
-					},
-					{
-						"type": "text",
-						"question": "this is a link based response question",
-						"required": false
-					}
-				]
+				"icon": "technical.svg"
 			},
 			{
 				"name": "HR and Management",
 				"head": "Anirudh Sridhar",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
-				"icon": "management.svg",
-
-				"questions": [
-					{
-						"type": "text",
-						"question": "this is a text based response question",
-						"required": true
-					},
-					{
-						"type": "radio",
-						"question": "this is a radio single response question",
-						"options": ["Yes", "No"],
-						"required": false
-					},
-					{
-						"type": "checkbox",
-						"question": "this is a checkbox multiple response question",
-						"options": ["Yes", "No", "Maybe"],
-						"limit": 2,
-						"required": true
-					},
-					{
-						"type": "text",
-						"question": "this is a link based response question",
-						"required": false
-					}
-				]
+				"icon": "management.svg"
 			},
 			{
 				"name": "Social Media and Content",
 				"head": "Teeshta Parmar",
 				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
-				"icon": "social-media.svg",
-
-				"questions": [
-					{
-						"type": "text",
-						"question": "this is a text based response question",
-						"required": true
-					},
-					{
-						"type": "radio",
-						"question": "this is a radio single response question",
-						"options": ["Yes", "No"],
-						"required": false
-					},
-					{
-						"type": "checkbox",
-						"question": "this is a checkbox multiple response question",
-						"options": ["Yes", "No", "Maybe"],
-						"limit": 2,
-						"required": true
-					},
-					{
-						"type": "text",
-						"question": "this is a link based response question",
-						"required": false
-					}
-				]
+				"icon": "social-media.svg"
 			}
 		],
 		"mediaPresence": {

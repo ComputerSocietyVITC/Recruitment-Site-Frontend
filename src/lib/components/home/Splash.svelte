@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 </script>
 
@@ -18,7 +19,7 @@
 				<span> so what are you waiting for? </span>
 				<button
 					class="md:bg-foreground text-background bg-primary py-2 px-8 rounded-xl font-semibold text-xl hover:bg-primary transition-all duration-300"
-					>Join Us</button
+					on:click|preventDefault={() => goto('/auth')}>Join Us</button
 				>
 			</div>
 		</div>

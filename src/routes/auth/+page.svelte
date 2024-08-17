@@ -7,9 +7,18 @@
 	import { supabase } from '$lib/supabase';
 	import { user } from '$lib/stores';
 
+	import { onMount } from 'svelte';
+
 	let name = '';
 	let email = '';
 	let password = '';
+
+	onMount(() => {
+		console.log($user);
+		if ($user) {
+			goto('/details');
+		}
+	});
 
 	const handleSignup = async () => {
 		if (/^[a-zA-Z0-9._%+-]+@vitstudent\.ac\.in$/.test(email)) {
@@ -17,17 +26,17 @@
 				email,
 				password
 			});
-
+			
 			if (!error) {
-				const populateUser = await supabase
+				const { data: populateUser, error: userError } = await supabase
 					.from('User')
 					.insert([{ id: data.user?.id, name: name, email: email }]);
 
-				if (!error) {
+				if (!userError) {
 					$user = { id: data.user?.id, name: name, email: email };
 					goto('/details');
 				} else {
-					console.error('signup failed: ' + populateUser.error?.message);
+					console.error('signup failed: ' + userError.message);
 				}
 			} else {
 				console.error('signup failed: ' + error.message);
@@ -56,7 +65,7 @@
 </script>
 
 <section class="flex items-center justify-center w-full min-h-screen p-6 md:p-0">
-	<div class="w-[25rem] border-[1px] border-primary rounded-lg bg-background-darker p-4">
+	<div class="w-[30rem] border-[1px] rounded-lg bg-background-darker p-4">
 		<span class="text-center w-full flex justify-center text-2xl font-semibold"
 			>{action.charAt(0).toUpperCase() + action.slice(1)}
 		</span>

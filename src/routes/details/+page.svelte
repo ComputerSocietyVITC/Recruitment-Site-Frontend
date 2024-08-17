@@ -6,7 +6,8 @@
 	import { goto } from '$app/navigation';
 
 	import { supabase } from '$lib/supabase';
-	import { user } from '$lib/stores';
+
+	import { user, changeDetails } from '$lib/stores';
 
 	import settings from '$lib/settings';
 
@@ -70,7 +71,8 @@
 			registrationNumber !== null &&
 			phoneNumber !== null &&
 			firstPreference !== null &&
-			secondPreference !== null
+			secondPreference !== null &&
+			$changeDetails === false
 		) {
 			goto('/form');
 		}
@@ -87,95 +89,94 @@
 					<span> Hey {$user?.name}! Let's get to know you a bit better...</span>
 				{:else if questionIdx === 0}
 					<div in:fade|local={{ duration: 2000, easing: cubicInOut }} class="flex flex-col gap-1">
-						<label for="regNum" class="text-lg p-2">Enter your registration number</label>
 						<input
 							type="text"
 							name="regNum"
 							placeholder="Enter your registration number"
 							bind:value={registrationNumber}
-							class="p-2 rounded-lg bg-background-lighter accent-black"
+							class="p-2 rounded-lg bg-background border-[1px]"
 						/>
 					</div>
 				{:else if questionIdx === 1}
 					<div in:fade|local={{ duration: 2000, easing: cubicInOut }} class="flex flex-col gap-1">
-						<label for="phoneNum" class="text-lg p-2">Enter your phone number</label>
 						<input
 							type="text"
 							name="phoneNum"
 							placeholder="Enter your phone number"
 							bind:value={phoneNumber}
-							class="p-2 rounded-lg bg-background-lighter accent-black"
+							class="p-2 rounded-lg bg-background border-[1px]"
 						/>
 					</div>
 				{:else if questionIdx === 2}
 					<div in:fade|local={{ duration: 2000, easing: cubicInOut }} class="flex flex-col gap-1">
-						<label for="regNum" class="md:text-3xl text-xl p-2"
-							>What is your first departmental preference</label
-						>
-						{#each questions[2].options as option}
-							{#if option === firstPreference}
-								<div class="md:text-xl text-base flex gap-2 items-center justify-start">
-									<input
-										type="radio"
-										name="pref"
-										checked={true}
-										on:change|preventDefault={() => {
-											firstPreference = option;
-										}}
-										class="p-2 rounded-lg bg-background-lighter accent-primary"
-									/>
-									<label for="pref">{option}</label>
-								</div>
-							{:else}
-								<div class="md:text-xl text-base flex gap-2 items-center justify-start">
-									<input
-										type="radio"
-										name="pref"
-										checked={false}
-										on:change|preventDefault={() => {
-											firstPreference = option;
-										}}
-										class="p-2 rounded-lg bg-background-lighter accent-primary"
-									/>
-									<label for="pref">{option}</label>
-								</div>
-							{/if}
-						{/each}
+						<label for="">Enter your first preference of department</label>
+						<div class="grid md:grid-cols-2 grid-cols-1 gap-4 mt-2">
+							{#each questions[2].options as option}
+								{#if option === firstPreference}
+									<div class="md:text-xl text-base flex gap-2 items-center justify-start">
+										<input
+											type="radio"
+											name="pref"
+											checked={true}
+											on:change|preventDefault={() => {
+												firstPreference = option;
+											}}
+											class="p-2 rounded-lg bg-background border-[1px]"
+										/>
+										<label for="pref">{option}</label>
+									</div>
+								{:else}
+									<div class="md:text-xl text-base flex gap-2 items-center justify-start">
+										<input
+											type="radio"
+											name="pref"
+											checked={false}
+											on:change|preventDefault={() => {
+												firstPreference = option;
+											}}
+											class="p-2 rounded-lg bg-background border-[1px]"
+										/>
+										<label for="pref">{option}</label>
+									</div>
+								{/if}
+							{/each}
+						</div>
 					</div>
 				{:else if questionIdx === 3}
 					<div in:fade|local={{ duration: 2000, easing: cubicInOut }} class="flex flex-col gap-1">
-						<label for="regNum" class="md:text-3xl text-xl p-2"
-							>What is your second departmental preference</label
-						>
-						{#each questions[2].options as option}
-							{#if option === secondPreference}
-								<div class="md:text-xl text-base flex gap-2 items-center justify-start">
-									<input
-										type="radio"
-										name="pref"
-										checked={true}
-										on:change|preventDefault={() => {
-											secondPreference = option;
-										}}
-										class="p-2 rounded-lg bg-background-lighter accent-primary"
-									/>
-									<label for="pref">{option}</label>
-								</div>
-							{:else}
-								<div class="md:text-xl text-base flex gap-2 items-center justify-start">
-									<input
-										type="radio"
-										name="pref"
-										checked={false}
-										on:change|preventDefault={() => {
-											secondPreference = option;
-										}}
-										class="p-2 rounded-lg bg-background-lighter accent-primary"
-									/>
-									<label for="pref">{option}</label>
-								</div>
-							{/if}
-						{/each}
+						<label for="">Enter your second preference of department</label>
+
+						<div class="grid md:grid-cols-2 grid-cols-1 gap-4 mt-2">
+							{#each questions[2].options as option}
+								{#if option === secondPreference}
+									<div class="md:text-xl text-base flex gap-2 items-center justify-start">
+										<input
+											type="radio"
+											name="pref"
+											checked={true}
+											on:change|preventDefault={() => {
+												secondPreference = option;
+											}}
+											class="p-2 rounded-lg bg-background border-[1px]"
+										/>
+										<label for="pref">{option}</label>
+									</div>
+								{:else}
+									<div class="md:text-xl text-base flex gap-2 items-center justify-start">
+										<input
+											type="radio"
+											name="pref"
+											checked={false}
+											on:change|preventDefault={() => {
+												secondPreference = option;
+											}}
+											class="p-2 rounded-lg bg-background border-[1px]"
+										/>
+										<label for="pref">{option}</label>
+									</div>
+								{/if}
+							{/each}
+						</div>
 					</div>
 				{:else}
 					<span in:fade|local={{ duration: 2000, easing: cubicInOut }}
@@ -186,7 +187,7 @@
 		</section>
 
 		<section
-			class="flex justify-between opacity-40 text-lg px-4 md:px-0"
+			class="flex justify-between text-lg px-4 md:px-0"
 			transition:fade={{ delay: 1500, duration: 500 }}
 		>
 			{#if start === false}
@@ -201,7 +202,7 @@
 					}}>back</button
 				>
 			{/if}
-			{#if questionIdx <= 3 || (!start && questionIdx === 4)}
+			{#if questionIdx <= 3}
 				<button
 					class="hover:opacity-50 ml-auto"
 					on:click|preventDefault={async () => {
@@ -224,6 +225,14 @@
 								console.error(error);
 							}
 						}
+					}}>next</button
+				>
+			{:else if questionIdx === 4}
+				<button
+					class="hover:opacity-50 ml-auto"
+					on:click|preventDefault={async () => {
+						$changeDetails = false;
+						goto('/form');
 					}}>next</button
 				>
 			{/if}

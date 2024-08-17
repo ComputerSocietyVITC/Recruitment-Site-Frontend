@@ -9,11 +9,9 @@
 	let rows = 10;
 
 	onMount(() => {
-		console.log(window.innerWidth, window.innerHeight);
-
 		if (window.innerWidth < 768) {
 			rows = 33;
-		} 
+		}
 	});
 </script>
 
