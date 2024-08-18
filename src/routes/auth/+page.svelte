@@ -1,5 +1,5 @@
 <script lang="ts">
-	let action = 'login';
+	let action = 'signup';
 
 	import { goto } from '$app/navigation';
 	import { slide } from 'svelte/transition';
