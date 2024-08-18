@@ -5,8 +5,6 @@
 
 	export let questionId: string;
 
-	let responseId: any = '';
-
 	let fields: any = [];
 	let response: any = '';
 
@@ -23,10 +21,10 @@
 			.from('AnswerMapping')
 			.select('response')
 			.eq('questionId', questionId)
+			.eq('userId', $user?.id)
 			.single();
 
-
-		console.log(responseDB)
+		console.log(responseDB);
 
 		if (responseDB === null) {
 			const error = await supabase
@@ -47,8 +45,10 @@
 		const { data, error } = await supabase
 			.from('AnswerMapping')
 			.update({ response: target.value })
-			.eq('questionId', questionId);
-		console.log(data, error)
+			.eq('questionId', questionId)
+			.eq('userId', $user?.id);
+
+		console.log(data, error);
 	};
 </script>
 

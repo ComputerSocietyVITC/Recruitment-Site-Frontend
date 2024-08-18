@@ -13,6 +13,7 @@
 			.from('AnswerMapping')
 			.select('response')
 			.eq('questionId', questionId)
+			.eq('userId', $user?.id)
 			.single();
 
 		console.log(responseDB);
@@ -34,7 +35,8 @@
 		const { data, error } = await supabase
 			.from('AnswerMapping')
 			.update({ response })
-			.eq('questionId', questionId);
+			.eq('questionId', questionId)
+			.eq('userId', $user?.id);
 
 		console.log(data, error);
 	};

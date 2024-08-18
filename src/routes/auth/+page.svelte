@@ -21,12 +21,16 @@
 	});
 
 	const handleSignup = async () => {
+		if (password.length < 6) {
+			alert('please enter a password of length more than 6');
+		}
+
 		if (/^[a-zA-Z0-9._%+-]+@vitstudent\.ac\.in$/.test(email)) {
 			const { data, error } = await supabase.auth.signUp({
 				email,
 				password
 			});
-			
+
 			if (!error) {
 				const { data: populateUser, error: userError } = await supabase
 					.from('User')
@@ -93,7 +97,7 @@
 				/>
 			</div>
 			<div class="flex flex-col space-y-2">
-				<label for="password" class="text-base">Password</label>
+				<label for="password" class="text-base">Password (min 6 chars)</label>
 				<input
 					bind:value={password}
 					type="password"

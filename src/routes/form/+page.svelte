@@ -88,9 +88,12 @@
 	<section class="h-screen w-screen fixed top-0 left-0 z-10 bg-background"></section>
 {:else if $submitted}
 	<section
-		class="h-screen w-screen fixed top-0 left-0 z-10 bg-background flex items-center justify-center"
+		class="h-screen w-screen fixed top-0 left-0 z-10 bg-background flex flex-col gap-8 items-center justify-center"
 	>
 		<div class="text-6xl font-bold text-center">YOU HAVE ALREADY SUBMITTED THE FORM</div>
+
+		<img src="/qrcode.png" alt="" class="w-96 rounded-3xl" />
+		<div class="text-2xl font-bold text-center">kindly join the group for further information</div>
 	</section>
 {:else}
 	<section class="flex flex-col gap-4 border-[1px] bg-background-darker rounded-lg p-4 mt-2">
@@ -107,15 +110,18 @@
 					? 'border-primary border-opacity-50'
 					: ''}">{firstPref}</button
 			>
-			<button
-				on:click={() => {
-					selected = 'secondPref';
-				}}
-				class="text-sm border-[1px] rounded-lg border-background-lighter p-4 transition-all duration-300 {selected ===
-				'secondPref'
-					? 'border-primary border-opacity-50'
-					: ''}">{secondPref}</button
-			>
+
+			{#if firstPref !== secondPref}
+				<button
+					on:click={() => {
+						selected = 'secondPref';
+					}}
+					class="text-sm border-[1px] rounded-lg border-background-lighter p-4 transition-all duration-300 {selected ===
+					'secondPref'
+						? 'border-primary border-opacity-50'
+						: ''}">{secondPref}</button
+				>
+			{/if}
 		</section>
 
 		<!-- desktop -->
@@ -131,15 +137,18 @@
 					? 'border-primary border-opacity-50'
 					: ''}">{firstPref}</button
 			>
-			<button
-				on:click={() => {
-					selected = 'secondPref';
-				}}
-				class="text-xl border-[1px] rounded-lg border-background-lighter p-4 transition-all duration-300 {selected ===
-				'secondPref'
-					? 'border-primary border-opacity-50'
-					: ''}">{secondPref}</button
-			>
+			{#if firstPref !== secondPref}
+				<button
+					on:click={() => {
+						selected = 'secondPref';
+					}}
+					class="text-xl border-[1px] rounded-lg border-background-lighter p-4 transition-all duration-300 {selected ===
+					'secondPref'
+						? 'border-primary border-opacity-50'
+						: ''}">{secondPref}</button
+				>
+			{/if}
+
 			{#each settings.club.departments as dept, i}
 				{#if dept.name !== firstPref && dept.name !== secondPref}
 					<span class="text-xl border-2 rounded-lg border-background-lighter p-4 opacity-25"
@@ -165,7 +174,7 @@
 						{/if}
 					{/each}
 				</div>
-			{:else if selected === 'secondPref'}
+			{:else if selected === 'secondPref' && firstPref !== secondPref}
 				<div transition:slide class="flex flex-col gap-8">
 					{#each secondPrefQuestions as question, i}
 						<div class="flex justify-between">
