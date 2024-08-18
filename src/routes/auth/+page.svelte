@@ -83,7 +83,7 @@
 				</div>
 			{/if}
 			<div class="flex flex-col space-y-2">
-				<label for="email" class="text-base">Email</label>
+				<label for="email" class="text-base">VIT Email</label>
 				<input
 					bind:value={email}
 					type="email"
