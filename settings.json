@@ -7,13 +7,13 @@
 			{
 				"name": "UI/UX and Design",
 				"head": "Mrithula and Jasmine",
-				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+				"description": "Join our UI/UX and Design team! Create stunning websites, 3D interfaces, game characters, and social media visuals. If you're passionate about innovative design and bringing ideas to life, come create something extraordinary with us!",
 				"icon": "design.svg"
 			},
 			{
 				"name": "Technical",
 				"head": "Sam Shervin",
-				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+				"description": "Join our tech-focused team! We build cool projects, host epic events, and explore new technologies. Collaborate with fellow enthusiasts, tackle exciting challenges, and enjoy a space where creativity and innovation thrive.",
 				"icon": "technical.svg"
 			},
 			{
@@ -25,7 +25,7 @@
 			{
 				"name": "Social Media and Content",
 				"head": "Teeshta Parmar",
-				"description": "loreum ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris",
+				"description": "Join our Social Media team! We create engaging content, manage our club's online presence, and run innovative campaigns across platforms. Help us connect with audiences and boost our club's visibility through compelling posts and strategic digital marketing.",
 				"icon": "social-media.svg"
 			}
 		],

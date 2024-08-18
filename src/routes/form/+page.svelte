@@ -38,6 +38,12 @@
 			if (data.user) {
 				let user_data = await supabase.from('User').select().eq('email', data.user.email).single();
 				$user = { id: user_data.data.id, name: user_data.data.name, email: user_data.data.email };
+				$submitted = user_data.data.submitted;
+
+				if ($submitted === true) {
+					goto('/join');
+				}
+
 				loading = false;
 			} else {
 				goto('/auth');
@@ -182,7 +188,13 @@
 		class="bg-foreground text-background flex justify-center w-full text-xl rounded-lg my-4 font-semibold py-1"
 		on:click|preventDefault={() => {
 			$submitted = true;
-			goto('/');
+
+			if ($user === null) {
+				return;
+			}
+
+			supabase.from('User').update({ submitted: true }).eq('id', $user.id);
+			goto('/join');
 		}}>submit</button
 	>
 {/if}

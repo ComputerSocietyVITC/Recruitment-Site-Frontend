@@ -3,8 +3,6 @@
 
 	import { base } from '$app/paths';
 
-	import settings from '$lib/settings';
-
 	import Splash from '$lib/components/home/Splash.svelte';
 	import Marquee from '$lib/components/home/Marquee.svelte';
 	import Department from '$lib/components/home/Department.svelte';
@@ -12,7 +10,10 @@
 	import Navbar from '$lib/components/home/Navbar.svelte';
 	import Footer from '$lib/components/home/Footer.svelte';
 
-	import { user } from '$lib/stores';
+	import { navigating } from '$app/stores';
+	import { onMount } from 'svelte';
+
+	onMount(() => {});
 </script>
 
 <main class="flex flex-col">
@@ -36,7 +37,9 @@
 	<!-- joinus -->
 
 	<section class="md:mt-36 mt-20 flex md:flex-row flex-col md:gap-24 gap-8">
-		<section class="md:flex hidden bg-background p-2 border-foreground border-4 rounded-3xl w-[50%]">
+		<section
+			class="md:flex hidden bg-background p-2 border-foreground border-4 rounded-3xl w-[50%]"
+		>
 			<img src="{base}/joinus5s.gif" alt="joinus" class="rounded-xl object-cover" />
 		</section>
 		<section class="flex flex-col gap-4 md:w-[75%]">

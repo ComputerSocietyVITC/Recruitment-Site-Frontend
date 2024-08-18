@@ -17,10 +17,6 @@
 			return;
 		}
 
-		console.log(width);
-		// 1424
-		// 1407
-
 		if (682 < width && width < 1424) {
 			rows = 18;
 		} else if (width <= 682) rows = 33;
