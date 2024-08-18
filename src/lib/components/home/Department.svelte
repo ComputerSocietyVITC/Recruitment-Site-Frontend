@@ -33,11 +33,11 @@
 	<section class="absolute top-2 flex flex-col w-full items-center gap-12">
 		<span class="font-header text-5xl font-bold p-4">Departments</span>
 
-		<section class="flex md:flex-row flex-col gap-12 text-foreground">
+		<section class="flex md:flex-row flex-col gap-4 text-foreground">
 			{#each settings.club.departments as department}
-				<div class="gap-4 bg-background w-80 h-96 rounded-xl flex flex-col items-center p-4">
+				<div class="gap-4 bg-background rounded-xl flex flex-col h-96 items-center p-4">
 					<div class="flex items-center gap-4 w-full">
-						<img src="{base}/assets/departments/{department.icon}" alt="icon" class="w-14 h-14" />
+						<img src="{base}/assets/departments/{department.icon}" alt="icon" class="w-14 h-14 object-cover" />
 						<span class="text-xl font-header font-semibold">{department.name}</span>
 					</div>
 					<span class="text-lg flex-grow">{department.description}</span>
