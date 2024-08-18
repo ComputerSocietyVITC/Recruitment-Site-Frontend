@@ -5,7 +5,7 @@
 
 	import { base } from '$app/paths';
 	import { supabase } from '$lib/supabase';
-	import { user, changeDetails } from '$lib/stores';
+	import { user, changeDetails, submitted } from '$lib/stores';
 </script>
 
 <nav class="flex md:justify-between justify-center md:mt-0 mt-4 py-4">
@@ -17,6 +17,10 @@
 		<a href="{base}/"><div>Home</div></a>
 		<button
 			on:click|preventDefault={async () => {
+				if ($submitted === true) {
+					goto('/join');
+				}
+
 				$changeDetails = true;
 				goto('/details');
 			}}>Details</button

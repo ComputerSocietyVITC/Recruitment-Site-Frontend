@@ -41,7 +41,7 @@
 </script>
 
 <textarea
-	class="w-full rounded-sm bg-background-lighter text-background border-4 p-2 border-background"
+	class="w-full rounded-lg bg-background text-foreground border-[1px] p-2 border-foreground"
 	bind:value={response}
 	on:focusout|preventDefault={updateResponse}
 	placeholder="enter your response here..."

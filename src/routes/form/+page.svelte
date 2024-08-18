@@ -151,7 +151,7 @@
 
 		<section class="w-full md:p-6 p-2 flex flex-col gap-4" transition:slide>
 			{#if selected === 'firstPref'}
-				<div transition:slide class="flex flex-col gap-2">
+				<div transition:slide class="flex flex-col gap-8">
 					{#each firstPrefQuestions as question, i}
 						<div class="flex justify-between gap-2" transition:slide>
 							<span class="md:text-xl">{i + 1}. {question.question}</span>
@@ -166,7 +166,7 @@
 					{/each}
 				</div>
 			{:else if selected === 'secondPref'}
-				<div transition:slide class="flex flex-col gap-2">
+				<div transition:slide class="flex flex-col gap-8">
 					{#each secondPrefQuestions as question, i}
 						<div class="flex justify-between">
 							<span class="md:text-xl">{i + 1}. {question.question}</span>
@@ -186,14 +186,13 @@
 
 	<button
 		class="bg-foreground text-background flex justify-center w-full text-xl rounded-lg my-4 font-semibold py-1"
-		on:click|preventDefault={() => {
+		on:click|preventDefault={async () => {
 			$submitted = true;
 
 			if ($user === null) {
 				return;
 			}
-
-			supabase.from('User').update({ submitted: true }).eq('id', $user.id);
+			await supabase.from('User').update({ submitted: true }).eq('id', $user.id);
 			goto('/join');
 		}}>submit</button
 	>
