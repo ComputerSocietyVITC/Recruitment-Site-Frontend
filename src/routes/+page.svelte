@@ -36,8 +36,8 @@
 	<!-- joinus -->
 
 	<section class="md:mt-36 mt-20 flex md:flex-row flex-col md:gap-24 gap-8">
-		<section class="md:flex hidden bg-background p-2 border-foreground border-4 rounded-3xl w-[50%] object-cover">
-			<img src="{base}/joinus5s.gif" alt="joinus" class="rounded-xl" />
+		<section class="md:flex hidden bg-background p-2 border-foreground border-4 rounded-3xl w-[50%]">
+			<img src="{base}/joinus5s.gif" alt="joinus" class="rounded-xl object-cover" />
 		</section>
 		<section class="flex flex-col gap-4 md:w-[75%]">
 			<span class="font-header md:text-5xl text-4xl font-bold">But Why Join Us?</span>
