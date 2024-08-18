@@ -1,4 +1,4 @@
-<footer class="my-5 flex justify-between items-center gap-4">
+<footer class="bg-[#0F0F0F] w-full mb-8 mt-24 flex justify-between items-center gap-4">
 	<span
 		>Made with blood, sweat and tears by <strong>
 			<a href="https://adityajyoti.com" target="_blank">Aditya Jyoti</a>
