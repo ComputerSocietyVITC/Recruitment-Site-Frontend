@@ -37,7 +37,7 @@
 
 	<section class="md:mt-36 mt-20 flex md:flex-row flex-col md:gap-24 gap-8">
 		<section class="md:flex hidden bg-background p-2 border-foreground border-4 rounded-3xl w-full">
-			<img src="{base}/joinus5s.gif" alt="joinus" class="rounded-xl" />
+			<img src="{base}/joinus5s.gif" alt="joinus" class="rounded-xl object-contain" />
 		</section>
 		<section class="flex flex-col gap-4 md:w-[75%]">
 			<span class="font-header md:text-5xl text-4xl font-bold">But Why Join Us?</span>
@@ -66,7 +66,7 @@
 			</button>
 		</section>
 		<section class="md:hidden bg-background p-2 border-foreground border-4 rounded-3xl w-full">
-			<img src="{base}/joinus5s.gif" alt="joinus" class="rounded-xl" />
+			<img src="{base}/joinus5s.gif" alt="joinus" class="rounded-xl object-contain" />
 		</section>
 	</section>
 
