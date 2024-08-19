@@ -99,63 +99,71 @@
 	<section class="flex flex-col gap-4 border-[1px] bg-background-darker rounded-lg p-4 mt-2">
 		<!-- mobile -->
 		<section
-			class="border-b-[1px] border-background-lighter p-4 md:hidden flex justify-around gap-2"
+			class="border-b-[1px] border-background-lighter p-4 md:hidden flex flex-col justify-center items-center gap-2"
 		>
-			<button
-				on:click={() => {
-					selected = 'firstPref';
-				}}
-				class="text-sm border-[1px] rounded-lg border-background-lighter p-4 transition-all duration-300 {selected ===
-				'firstPref'
-					? 'border-primary border-opacity-50'
-					: ''}">{firstPref}</button
-			>
-
-			{#if firstPref !== secondPref}
+			<div class="flex justify-between gap-4" >
 				<button
 					on:click={() => {
-						selected = 'secondPref';
+						selected = 'firstPref';
 					}}
 					class="text-sm border-[1px] rounded-lg border-background-lighter p-4 transition-all duration-300 {selected ===
-					'secondPref'
+					'firstPref'
 						? 'border-primary border-opacity-50'
-						: ''}">{secondPref}</button
+						: ''}">{firstPref}</button
 				>
-			{/if}
+
+				{#if firstPref !== secondPref}
+					<button
+						on:click={() => {
+							selected = 'secondPref';
+						}}
+						class="text-sm border-[1px] rounded-lg border-background-lighter p-4 transition-all duration-300 {selected ===
+						'secondPref'
+							? 'border-primary border-opacity-50'
+							: ''}">{secondPref}</button
+					>
+				{/if}
+			</div>
+
+			<span class="font-semibold text-center">kindly submit only after filling both your preferences</span>
 		</section>
 
 		<!-- desktop -->
 		<section
-			class="border-b-[1px] border-background-lighter p-4 md:flex hidden justify-around gap-2"
+			class="border-b-[1px] border-background-lighter p-4 md:flex md:flex-col hidden w-full justify-center items-center gap-2"
 		>
-			<button
-				on:click={() => {
-					selected = 'firstPref';
-				}}
-				class="text-xl border-2 rounded-lg border-background-lighter p-4 transition-all duration-300 {selected ===
-				'firstPref'
-					? 'border-primary border-opacity-50'
-					: ''}">{firstPref}</button
-			>
-			{#if firstPref !== secondPref}
+			<div class="flex w-full justify-around">
 				<button
 					on:click={() => {
-						selected = 'secondPref';
+						selected = 'firstPref';
 					}}
-					class="text-xl border-[1px] rounded-lg border-background-lighter p-4 transition-all duration-300 {selected ===
-					'secondPref'
+					class="text-xl border-2 rounded-lg border-background-lighter p-4 transition-all duration-300 {selected ===
+					'firstPref'
 						? 'border-primary border-opacity-50'
-						: ''}">{secondPref}</button
+						: ''}">{firstPref}</button
 				>
-			{/if}
-
-			{#each settings.club.departments as dept, i}
-				{#if dept.name !== firstPref && dept.name !== secondPref}
-					<span class="text-xl border-2 rounded-lg border-background-lighter p-4 opacity-25"
-						>{dept.name}</span
+				{#if firstPref !== secondPref}
+					<button
+						on:click={() => {
+							selected = 'secondPref';
+						}}
+						class="text-xl border-[1px] rounded-lg border-background-lighter p-4 transition-all duration-300 {selected ===
+						'secondPref'
+							? 'border-primary border-opacity-50'
+							: ''}">{secondPref}</button
 					>
 				{/if}
-			{/each}
+
+				{#each settings.club.departments as dept, i}
+					{#if dept.name !== firstPref && dept.name !== secondPref}
+						<span class="text-xl border-2 rounded-lg border-background-lighter p-4 opacity-25"
+							>{dept.name}</span
+						>
+					{/if}
+				{/each}
+			</div>
+
+			<span class="font-semibold">kindly submit only after filling both your preferences</span>
 		</section>
 
 		<section class="w-full md:p-6 p-2 flex flex-col gap-4" transition:slide>
