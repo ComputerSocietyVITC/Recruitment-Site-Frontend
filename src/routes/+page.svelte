@@ -1,16 +1,13 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-
 	import { base } from '$app/paths';
 
-	import Splash from '$lib/components/home/Splash.svelte';
-	import Marquee from '$lib/components/home/Marquee.svelte';
-	import Department from '$lib/components/home/Department.svelte';
+	import Splash from '$lib/components/Splash.svelte';
+	import Marquee from '$lib/components/Marquee.svelte';
+	import Department from '$lib/components/Department.svelte';
 
-	import Navbar from '$lib/components/home/Navbar.svelte';
-	import Footer from '$lib/components/home/Footer.svelte';
+	import Navbar from '$lib/components/Navbar.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
-	import { navigating } from '$app/stores';
 	import { onMount } from 'svelte';
 
 	onMount(() => {});
@@ -61,12 +58,6 @@
 					learning by holding monthly workshops, seminars and project showcase sessions.
 				</span>
 			</div>
-			<button
-				class="md:bg-foreground text-background bg-primary rounded-xl font-bold hover:bg-primary transition-colors duration-300 text-lg"
-				on:click|preventDefault={() => goto('/auth')}
-			>
-				Join Us
-			</button>
 		</section>
 		<section class="md:hidden bg-background p-2 border-foreground border-4 rounded-3xl w-full">
 			<img src="{base}/joinus5s.gif" alt="joinus" class="rounded-xl" />

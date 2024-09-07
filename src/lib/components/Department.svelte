@@ -11,7 +11,6 @@
 	onMount(() => {
 		const bgElements = document.getElementById('bg-elements');
 		const width = bgElements?.offsetWidth;
-		const height = bgElements?.clientHeight;
 
 		if (!width) {
 			return;
